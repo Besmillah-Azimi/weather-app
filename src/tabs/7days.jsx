@@ -97,6 +97,8 @@ const SevenDayWeather = () => {
 
   const labels = {
     title: `Forecast Weather in ${weather.name} , ${fullCountry} (Next 6 Days)`,
+    today: "Today",
+    tomorrow: "Tomorrow",
   };
 
   const [translated, setTranslated] = useState(labels);
@@ -223,14 +225,19 @@ const SevenDayWeather = () => {
           const nToday = normalize(today);
           const nTomorrow = normalize(tomorrow);
 
-          let displayDay = dayDate.toLocaleDateString(language, {
+          const locale =
+            language && /^[a-z]{2}(-[A-Z]{2})?$/.test(language)
+              ? language
+              : "en-US"; // fallback if invalid
+
+          let displayDay = dayDate.toLocaleDateString(locale, {
             weekday: "long",
           });
 
           if (nDay === nToday) {
-            displayDay = "Today";
+            displayDay = translated.today;
           } else if (nDay === nTomorrow) {
-            displayDay = "Tomorrow";
+            displayDay = translated.tomorrow;
           }
 
           return (
@@ -241,7 +248,7 @@ const SevenDayWeather = () => {
             >
               <div className="relative z-10 p-6 text-center flex flex-col items-center space-y-3">
                 <p className="text-sm text-gray-300">
-                  {new Date(day.dt_txt).toLocaleDateString(language, {
+                  {new Date(day.dt_txt).toLocaleDateString(locale, {
                     day: "numeric",
                     month: "long",
                   })}

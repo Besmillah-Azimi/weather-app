@@ -85,7 +85,10 @@ const Hourly = () => {
   // Format time
   const formatTime = (dt_txt) => {
     const date = new Date(dt_txt);
-    return date.toLocaleTimeString(language, {
+
+    const locale =
+      language && /^[a-z]{2}(-[A-Z]{2})?$/.test(language) ? language : "en-US"; // fallback if invalid
+    return date.toLocaleTimeString(locale, {
       hour: "2-digit",
       minute: "2-digit",
       hour12: true,
