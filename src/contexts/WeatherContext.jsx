@@ -5,8 +5,8 @@ import {
   useEffect,
   useReducer,
 } from "react";
-import { LocationContext } from "./LocationContext";
-import { LanguageContext } from "./LanguageContext";
+import { useLocation } from "./LocationContext";
+import { useLanguage } from "./LanguageContext";
 import axios from "axios";
 
 import {
@@ -22,23 +22,24 @@ export default function WeatherProvider({ children }) {
 
   const API_KEY = "0394d321ae430d0c9b13209d3cde0e76";
 
-  const { language } = useContext(LanguageContext);
+  const { loading, setLoading, language } = useLanguage();
 
-  const [lati, setLat] = useState(null);
-  const [long, setLon] = useState(null);
   const [weather, setWeather] = useState(null);
 
-  const [targetCity, setTargetCity] = useState("");
+  const [targetCity, setTargetCity] = useState(null);
 
-  const { city, location } = useContext(LocationContext);
+  const { city, location } = useLocation();
 
   const [fullCountry, setFullCountry] = useState("");
 
   useEffect(() => {
-    if (city && city.trim() !== "") {
-      setTargetCity(city);
-    } else {
-      setTargetCity(location);
+    setLoading(true);
+    if (location) {
+      if (city && city.trim() !== "") {
+        setTargetCity(`q=${city}`);
+      } else {
+        setTargetCity(`lat=${location.lat}&lon=${location.lon}`);
+      }
     }
   }, [city, location]);
 
@@ -68,10 +69,12 @@ export default function WeatherProvider({ children }) {
 
     await axios
       .get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${targetCity}&appid=${API_KEY}&units=metric&lang=${language}`
+        `https://api.openweathermap.org/data/2.5/weather?${targetCity}&appid=${API_KEY}&units=metric&lang=${language}`
       )
       .then((res) => {
-        const regionNames = new Intl.DisplayNames(["en"], { type: "region" });
+        const regionNames = new Intl.DisplayNames([language], {
+          type: "region",
+        });
         const fullCountryName = regionNames.of(res.data.sys?.country); // "Pakistan"
         setFullCountry(fullCountryName);
         setWeather(res.data);
@@ -131,10 +134,6 @@ export default function WeatherProvider({ children }) {
             payload: "night",
           });
         }
-        const { lat, lon } = res.data.coord;
-
-        setLat(lat);
-        setLon(lon);
       });
   };
 
@@ -149,14 +148,16 @@ export default function WeatherProvider({ children }) {
         weather,
         fullCountry,
         state,
-        lati,
         API_KEY,
-        long,
         weatherIcons,
         setWeather,
+        loading,
+        setLoading,
       }}
     >
       {children}
     </WeatherContext.Provider>
   );
 }
+
+export const useWeather = () => useContext(WeatherContext);

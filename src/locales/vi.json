@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Độ ẩm",
+    "wind_speed": "Gió",
+    "feels_like": "Cảm giác như",
+    "rain": "Mưa",
+    "max": "Cao nhất",
+    "min": "Thấp nhất",
+    "pressure": "Áp suất",
+    "visibility": "Tầm nhìn",
+    "clouds": "Mây",
+    "quick_stats": "Thống kê nhanh",
+    "sun_cycle": "Chu kỳ mặt trời",
+    "sunrise": "Mặt trời mọc",
+    "sunset": "Mặt trời lặn",
+    "daylight_progress": "Tiến độ ánh sáng ban ngày",
+    "next_hours": "Giờ tiếp theo",
+    "air_alerts": "Không khí & Cảnh báo",
+    "air_quality": "Chất lượng không khí",
+    "active_alerts": "Cảnh báo đang hoạt động",
+    "no_alerts": "Không có cảnh báo",
+    "nighttime": "Đêm",
+    "aqi_1": "Chất lượng không khí tuyệt vời",
+    "aqi_2": "Chất lượng không khí tốt",
+    "aqi_3": "Trung bình — nhóm nhạy cảm có thể bị ảnh hưởng",
+    "aqi_4": "Kém — giảm hoạt động ngoài trời",
+    "aqi_5": "Rất kém — tránh ra ngoài",
+    "aqi_good": "Tuyệt vời",
+    "aqi_fair": "Tốt",
+    "aqi_moderate": "Trung bình",
+    "aqi_poor": "Kém",
+    "aqi_very_poor": "Rất kém",
+    "hours": "giờ",
+    "minutes": "phút",
+    "remaining": "còn lại"
+  },
+  "hourly": {
+    "title": "Dự báo hàng giờ chi tiết"
+  },
+  "daily": {
+    "title": "Dự báo 6 ngày chi tiết",
+    "today": "Hôm nay",
+    "tomorrow": "Ngày mai"
+  },
+  "menu": {
+    "Language": "Ngôn ngữ",
+    "overview": "Tổng quan",
+    "hourly": "Theo giờ",
+    "Daily": "Hàng ngày"
+  },
+  "search": {
+    "placeholder": "Tìm kiếm thành phố…"
+  }
+}

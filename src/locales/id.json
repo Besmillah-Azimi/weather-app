@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Kelembapan",
+    "wind_speed": "Angin",
+    "feels_like": "Terasa seperti",
+    "rain": "Hujan",
+    "max": "Maks",
+    "min": "Min",
+    "pressure": "Tekanan",
+    "visibility": "Jarak pandang",
+    "clouds": "Awan",
+    "quick_stats": "Statistik cepat",
+    "sun_cycle": "Siklus matahari",
+    "sunrise": "Matahari terbit",
+    "sunset": "Matahari terbenam",
+    "daylight_progress": "Kemajuan siang hari",
+    "next_hours": "Jam berikutnya",
+    "air_alerts": "Udara & Peringatan",
+    "air_quality": "Kualitas udara",
+    "active_alerts": "Peringatan aktif",
+    "no_alerts": "Tidak ada peringatan aktif",
+    "nighttime": "Malam",
+    "aqi_1": "Kualitas udara sangat baik",
+    "aqi_2": "Kualitas udara baik",
+    "aqi_3": "Sedang — kelompok sensitif terdampak",
+    "aqi_4": "Buruk — kurangi aktivitas luar",
+    "aqi_5": "Sangat buruk — hindari keluar",
+    "aqi_good": "Sangat Baik",
+    "aqi_fair": "Baik",
+    "aqi_moderate": "Sedang",
+    "aqi_poor": "Buruk",
+    "aqi_very_poor": "Sangat Buruk",
+    "hours": "jam",
+    "minutes": "menit",
+    "remaining": "tersisa"
+  },
+  "hourly": {
+    "title": "Prakiraan per jam terperinci"
+  },
+  "daily": {
+    "title": "Prakiraan 6 hari terperinci",
+    "today": "Hari ini",
+    "tomorrow": "Besok"
+  },
+  "menu": {
+    "Language": "Bahasa",
+    "overview": "Ikhtisar",
+    "hourly": "Per jam",
+    "Daily": "Harian"
+  },
+  "search": {
+    "placeholder": "Cari kota…"
+  }
+}

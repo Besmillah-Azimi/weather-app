@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Vlhkosť",
+    "wind_speed": "Vietor",
+    "feels_like": "Pocítovo",
+    "rain": "Dážď",
+    "max": "Max",
+    "min": "Min",
+    "pressure": "Tlak",
+    "visibility": "Viditeľnosť",
+    "clouds": "Oblačnosť",
+    "quick_stats": "Rýchle štatistiky",
+    "sun_cycle": "Slnečný cyklus",
+    "sunrise": "Východ slnka",
+    "sunset": "Západ slnka",
+    "daylight_progress": "Pokrok denného svetla",
+    "next_hours": "Nasledujúce hodiny",
+    "air_alerts": "Vzduch a výstrahy",
+    "air_quality": "Kvalita vzduchu",
+    "active_alerts": "Aktívne výstrahy",
+    "no_alerts": "Žiadne aktívne výstrahy",
+    "nighttime": "Noc",
+    "aqi_1": "Kvalita ovzdušia je vynikajúca",
+    "aqi_2": "Kvalita ovzdušia je dobrá",
+    "aqi_3": "Stredná — citlivé skupiny môžu byť ovplyvnené",
+    "aqi_4": "Zlá — obmedzte aktivity vonku",
+    "aqi_5": "Veľmi zlá — nevychádzajte",
+    "aqi_good": "Vynikajúca",
+    "aqi_fair": "Dobrá",
+    "aqi_moderate": "Stredná",
+    "aqi_poor": "Zlá",
+    "aqi_very_poor": "Veľmi zlá",
+    "hours": "hodín",
+    "minutes": "minút",
+    "remaining": "zostáva"
+  },
+  "hourly": {
+    "title": "Detailná hodinová predpoveď"
+  },
+  "daily": {
+    "title": "Detailná 6-dňová predpoveď",
+    "today": "Dnes",
+    "tomorrow": "Zajtra"
+  },
+  "menu": {
+    "Language": "Jazyk",
+    "overview": "Prehľad",
+    "hourly": "Hodinové",
+    "Daily": "Denne"
+  },
+  "search": {
+    "placeholder": "Hľadať mesto…"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Humidity",
+    "wind_speed": "Wind",
+    "feels_like": "Feels like",
+    "rain": "Rain",
+    "max": "High",
+    "min": "Low",
+    "pressure": "Pressure",
+    "visibility": "Visibility",
+    "clouds": "Cloud cover",
+    "quick_stats": "Quick Stats",
+    "sun_cycle": "Sun Cycle",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "daylight_progress": "Daylight Progress",
+    "next_hours": "Next Hours",
+    "air_alerts": "Air & Alerts",
+    "air_quality": "Air Quality",
+    "active_alerts": "Active Alerts",
+    "no_alerts": "No active alerts",
+    "nighttime": "Nighttime",
+    "aqi_1": "Air quality is excellent",
+    "aqi_2": "Air quality is good",
+    "aqi_3": "Moderate air — sensitive groups may feel effects",
+    "aqi_4": "Poor air — reduce outdoor activities",
+    "aqi_5": "Very poor — avoid staying outside",
+    "aqi_good": "Excellent",
+    "aqi_fair": "Good",
+    "aqi_moderate": "Moderate",
+    "aqi_poor": "Poor",
+    "aqi_very_poor": "Very Poor",
+    "hours": "hours",
+    "minutes": "minutes",
+    "remaining": "remaining"
+  },
+  "hourly": {
+    "title": "Detailed Hourly Forecast"
+  },
+  "daily": {
+    "title": "Detailed 6-Day Forecast",
+    "today": "Today",
+    "tomorrow": "Tomorrow"
+  },
+  "menu": {
+    "Language": "Language",
+    "overview": "Overview",
+    "hourly": "Hourly",
+    "Daily": "Daily"
+  },
+  "search": {
+    "placeholder": "Search city…"
+  }
+}

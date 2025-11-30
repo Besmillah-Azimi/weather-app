@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Kosteus",
+    "wind_speed": "Tuuli",
+    "feels_like": "Tuntuu kuin",
+    "rain": "Sade",
+    "max": "Korkein",
+    "min": "Alin",
+    "pressure": "Paine",
+    "visibility": "Näkyvyys",
+    "clouds": "Pilvpeite",
+    "quick_stats": "Pikastatistiikka",
+    "sun_cycle": "Auringon kierto",
+    "sunrise": "Auringonnousu",
+    "sunset": "Auringonlasku",
+    "daylight_progress": "Päivänvalon edistyminen",
+    "next_hours": "Seuraavat tunnit",
+    "air_alerts": "Ilma ja hälytykset",
+    "air_quality": "Ilmanlaatu",
+    "active_alerts": "Aktiiviset hälytykset",
+    "no_alerts": "Ei aktiivisia hälytyksiä",
+    "nighttime": "Yö",
+    "aqi_1": "Ilmanlaatu on erinomainen",
+    "aqi_2": "Ilmanlaatu on hyvä",
+    "aqi_3": "Kohtalainen — herkät ryhmät voivat kärsiä",
+    "aqi_4": "Huono — vähennä ulkoilua",
+    "aqi_5": "Erittäin huono — älä mene ulos",
+    "aqi_good": "Erinomainen",
+    "aqi_fair": "Hyvä",
+    "aqi_moderate": "Kohtalainen",
+    "aqi_poor": "Huono",
+    "aqi_very_poor": "Erittäin huono",
+    "hours": "tuntia",
+    "minutes": "minuuttia",
+    "remaining": "jäljellä"
+  },
+  "hourly": {
+    "title": "Yksityiskohtainen tuntiennuste"
+  },
+  "daily": {
+    "title": "Yksityiskohtainen 6 päivän ennuste",
+    "today": "Tänään",
+    "tomorrow": "Huomenna"
+  },
+  "menu": {
+    "Language": "Kieli",
+    "overview": "Yleiskatsaus",
+    "hourly": "Tunneittain",
+    "Daily": "Päivittäin"
+  },
+  "search": {
+    "placeholder": "Hae kaupunki…"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Umidità",
+    "wind_speed": "Vento",
+    "feels_like": "Percepita",
+    "rain": "Pioggia",
+    "max": "Massima",
+    "min": "Minima",
+    "pressure": "Pressione",
+    "visibility": "Visibilità",
+    "clouds": "Nuvolosità",
+    "quick_stats": "Statistiche rapide",
+    "sun_cycle": "Ciclo solare",
+    "sunrise": "Alba",
+    "sunset": "Tramonto",
+    "daylight_progress": "Progresso luce diurna",
+    "next_hours": "Prossime ore",
+    "air_alerts": "Aria & Avvisi",
+    "air_quality": "Qualità dell’aria",
+    "active_alerts": "Avvisi attivi",
+    "no_alerts": "Nessun avviso attivo",
+    "nighttime": "Notte",
+    "aqi_1": "Qualità dell’aria eccellente",
+    "aqi_2": "Qualità dell’aria buona",
+    "aqi_3": "Moderata — gruppi sensibili possono risentirne",
+    "aqi_4": "Scadente — ridurre attività all’aperto",
+    "aqi_5": "Molto scarsa — evitare di uscire",
+    "aqi_good": "Eccellente",
+    "aqi_fair": "Buona",
+    "aqi_moderate": "Moderata",
+    "aqi_poor": "Scadente",
+    "aqi_very_poor": "Molto scarsa",
+    "hours": "ore",
+    "minutes": "minuti",
+    "remaining": "rimanente"
+  },
+  "hourly": {
+    "title": "Previsioni dettagliate orarie"
+  },
+  "daily": {
+    "title": "Previsioni dettagliate a 6 giorni",
+    "today": "Oggi",
+    "tomorrow": "Domani"
+  },
+  "menu": {
+    "Language": "Lingua",
+    "overview": "Panoramica",
+    "hourly": "Orario",
+    "Daily": "Giornaliero"
+  },
+  "search": {
+    "placeholder": "Cerca città…"
+  }
+}

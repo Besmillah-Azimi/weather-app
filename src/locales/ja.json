@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "湿度",
+    "wind_speed": "風速",
+    "feels_like": "体感温度",
+    "rain": "雨",
+    "max": "最高",
+    "min": "最低",
+    "pressure": "気圧",
+    "visibility": "視程",
+    "clouds": "雲量",
+    "quick_stats": "クイック統計",
+    "sun_cycle": "太陽サイクル",
+    "sunrise": "日の出",
+    "sunset": "日の入",
+    "daylight_progress": "日照進捗",
+    "next_hours": "次の数時間",
+    "air_alerts": "空気と警報",
+    "air_quality": "空気質",
+    "active_alerts": "有効な警報",
+    "no_alerts": "有効な警報なし",
+    "nighttime": "夜",
+    "aqi_1": "空気質は非常に良好",
+    "aqi_2": "空気質は良好",
+    "aqi_3": "中程度 — 敏感な人は影響を受ける可能性",
+    "aqi_4": "悪い — 屋外活動を控える",
+    "aqi_5": "非常に悪い — 外出を控える",
+    "aqi_good": "非常に良好",
+    "aqi_fair": "良好",
+    "aqi_moderate": "中程度",
+    "aqi_poor": "悪い",
+    "aqi_very_poor": "非常に悪い",
+    "hours": "時間",
+    "minutes": "分",
+    "remaining": "残り"
+  },
+  "hourly": {
+    "title": "詳細な時間別予報"
+  },
+  "daily": {
+    "title": "詳細な6日間予報",
+    "today": "今日",
+    "tomorrow": "明日"
+  },
+  "menu": {
+    "Language": "言語",
+    "overview": "概要",
+    "hourly": "時間別",
+    "Daily": "日別"
+  },
+  "search": {
+    "placeholder": "都市を検索…"
+  }
+}

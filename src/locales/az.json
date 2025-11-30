@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Rütubət",
+    "wind_speed": "Külək",
+    "feels_like": "Hiss olunur",
+    "rain": "Yağış",
+    "max": "Maks",
+    "min": "Min",
+    "pressure": "Təzyiq",
+    "visibility": "Görünüş",
+    "clouds": "Buludluq",
+    "quick_stats": "Tez statistika",
+    "sun_cycle": "Günəş dövrü",
+    "sunrise": "Günəş çıxışı",
+    "sunset": "Gün batımı",
+    "daylight_progress": "Gündüz işığı",
+    "next_hours": "Növbəti saatlar",
+    "air_alerts": "Hava və xəbərdarlıqlar",
+    "air_quality": "Hava keyfiyyəti",
+    "active_alerts": "Aktiv xəbərdarlıqlar",
+    "no_alerts": "Aktiv xəbərdarlıq yoxdur",
+    "nighttime": "Gecə",
+    "aqi_1": "Hava keyfiyyəti əladır",
+    "aqi_2": "Hava keyfiyyəti yaxşıdır",
+    "aqi_3": "Orta — həssas qruplar təsirlənə bilər",
+    "aqi_4": "Zəif — açıq hava fəaliyyətini azaldın",
+    "aqi_5": "Çox zəif — çölə çıxmayın",
+    "aqi_good": "Əla",
+    "aqi_fair": "Yaxşı",
+    "aqi_moderate": "Orta",
+    "aqi_poor": "Zəif",
+    "aqi_very_poor": "Çox zəif",
+    "hours": "saat",
+    "minutes": "dəqiqə",
+    "remaining": "qalan"
+  },
+  "hourly": {
+    "title": "Detallı saatlıq proqnoz"
+  },
+  "daily": {
+    "title": "Detallı 6 günlük proqnoz",
+    "today": "Bu gün",
+    "tomorrow": "Sabah"
+  },
+  "menu": {
+    "Language": "Dil",
+    "overview": "İcmal",
+    "hourly": "Saatlıq",
+    "Daily": "Gündəlik"
+  },
+  "search": {
+    "placeholder": "Şəhər axtar…"
+  }
+}

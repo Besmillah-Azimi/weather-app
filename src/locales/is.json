@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Raki",
+    "wind_speed": "Vindur",
+    "feels_like": "Líður eins og",
+    "rain": "Rigning",
+    "max": "Hámark",
+    "min": "Lágmark",
+    "pressure": "Loftþrýstingur",
+    "visibility": "Skyggni",
+    "clouds": "Skýjahula",
+    "quick_stats": "Flýtistærðir",
+    "sun_cycle": "Sólhringur",
+    "sunrise": "Sóluppganga",
+    "sunset": "Sólsetur",
+    "daylight_progress": "Dagsbirtu framvinda",
+    "next_hours": "Næstu klukkustundir",
+    "air_alerts": "Loft og viðvaranir",
+    "air_quality": "Loftgæði",
+    "active_alerts": "Virk viðvörun",
+    "no_alerts": "Engin virk viðvörun",
+    "nighttime": "Nótt",
+    "aqi_1": "Loftgæði eru frábær",
+    "aqi_2": "Loftgæði eru góð",
+    "aqi_3": "Í meðallagi — viðkvæmir hópar geta orðið fyrir áhrifum",
+    "aqi_4": "Slæm — minnkaðu útiveru",
+    "aqi_5": "Mjög slæm — forðastu að fara út",
+    "aqi_good": "Frábær",
+    "aqi_fair": "Góð",
+    "aqi_moderate": "Í meðallagi",
+    "aqi_poor": "Slæm",
+    "aqi_very_poor": "Mjög slæm",
+    "hours": "klukkustundir",
+    "minutes": "mínútur",
+    "remaining": "eftir"
+  },
+  "hourly": {
+    "title": "Ítarleg klukkustunda spá"
+  },
+  "daily": {
+    "title": "Ítarleg 6 daga spá",
+    "today": "Í dag",
+    "tomorrow": "Á morgun"
+  },
+  "menu": {
+    "Language": "Tungumál",
+    "overview": "Yfirlit",
+    "hourly": "Klukkutíma",
+    "Daily": "Daglega"
+  },
+  "search": {
+    "placeholder": "Leita að borg…"
+  }
+}

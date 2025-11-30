@@ -1,8 +1,16 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export const LanguageContext = createContext();
 
 export default function LanguageProvider({ children }) {
+  const { i18n } = useTranslation();
+  const [language, setLanguage] = useState(i18n.language || "en");
+
+  const [loading, setLoading] = useState(false);
+  const [langModal, setLangModal] = useState(false);
+  const [alert, setAlert] = useState({ show: false, message: "" });
+  // لیست زبان‌ها (la → lv اصلاح شد)
   const langs = [
     { code: "sq", name: "Albanian" },
     { code: "af", name: "Afrikaans" },
@@ -30,7 +38,7 @@ export default function LanguageProvider({ children }) {
     { code: "it", name: "Italian" },
     { code: "ja", name: "Japanese" },
     { code: "ku", name: "Kurmanji (Kurdish)" },
-    { code: "la", name: "Latvian" },
+    { code: "lv", name: "Latvian" }, // اصلاح شده
     { code: "lt", name: "Lithuanian" },
     { code: "mk", name: "Macedonian" },
     { code: "no", name: "Norwegian" },
@@ -45,27 +53,50 @@ export default function LanguageProvider({ children }) {
     { code: "es", name: "Spanish" },
     { code: "sv", name: "Swedish" },
     { code: "th", name: "Thai" },
-    { code: "tr", name: "Turkish" },
+    { code: "tr", name: "Türkçe" },
     { code: "uk", name: "Ukrainian" },
     { code: "vi", name: "Vietnamese" },
   ];
 
-  const [language, setLanguage] = useState("");
-  const savedLanguage = localStorage.getItem("appLanguage");
-
+  // هر وقت i18n زبان عوض کرد، state رو آپدیت کن
   useEffect(() => {
-    if (savedLanguage) {
-      setLanguage(savedLanguage);
-    }
-  }, []);
+    const handleChange = (lng) => {
+      setLanguage(lng);
+      localStorage.setItem("appLanguage", lng);
+      setAlert({show: true})
+    };
 
-  useEffect(() => {
-    localStorage.setItem("appLanguage", language);
-  }, [language]);
+    i18n.on("languageChanged", handleChange);
+    setLanguage(i18n.language); // اولین بار
+
+    return () => i18n.off("languageChanged", handleChange);
+  }, [i18n]);
+
+  // وقتی از Context زبان عوض شد، به i18n بگو
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
+  const isRTL = ["ar", "fa", "he", "ku"].includes(language);
 
   return (
-    <LanguageContext.Provider value={{ langs, language, setLanguage }}>
+    <LanguageContext.Provider
+      value={{
+        language,
+        setLanguage: changeLanguage, // این همون i18n.changeLanguage هست
+        langs,
+        isRTL,
+        loading,
+        setLoading,
+        langModal,
+        setLangModal,
+        alert,
+        setAlert,
+      }}
+    >
       {children}
     </LanguageContext.Provider>
   );
 }
+
+export const useLanguage = () => useContext(LanguageContext);

@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Mitrums",
+    "wind_speed": "Vējš",
+    "feels_like": "Sajūta kā",
+    "rain": "Lietus",
+    "max": "Maks",
+    "min": "Min",
+    "pressure": "Spiediens",
+    "visibility": "Redzamība",
+    "clouds": "Mākoņi",
+    "quick_stats": "Ātrie statistikas dati",
+    "sun_cycle": "Saules cikls",
+    "sunrise": "Saullēkts",
+    "sunset": "Saulriets",
+    "daylight_progress": "Dienasgaismas progress",
+    "next_hours": "Nākamās stundas",
+    "air_alerts": "Gaiss un brīdinājumi",
+    "air_quality": "Gaisa kvalitāte",
+    "active_alerts": "Aktīvi brīdinājumi",
+    "no_alerts": "Nav aktīvu brīdinājumu",
+    "nighttime": "Nakts",
+    "aqi_1": "Gaisa kvalitāte ir izcila",
+    "aqi_2": "Gaisa kvalitāte ir laba",
+    "aqi_3": "Vidēja — jutīgas grupas var tikt ietekmētas",
+    "aqi_4": "Slikta — samaziniet aktivitātes ārā",
+    "aqi_5": "Ļoti slikta — palieciet iekštelpās",
+    "aqi_good": "Izcila",
+    "aqi_fair": "Laba",
+    "aqi_moderate": "Vidēja",
+    "aqi_poor": "Slikta",
+    "aqi_very_poor": "Ļoti slikta",
+    "hours": "stundas",
+    "minutes": "minūtes",
+    "remaining": "atlikušas"
+  },
+  "hourly": {
+    "title": "Detalizēta stundu prognoze"
+  },
+  "daily": {
+    "title": "Detalizēta 6 dienu prognoze",
+    "today": "Šodien",
+    "tomorrow": "Rīt"
+  },
+  "menu": {
+    "Language": "Valoda",
+    "overview": "Pārskats",
+    "hourly": "Pēc stundām",
+    "Daily": "Dienas"
+  },
+  "search": {
+    "placeholder": "Meklēt pilsētu…"
+  }
+}

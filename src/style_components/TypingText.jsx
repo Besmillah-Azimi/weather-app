@@ -11,7 +11,7 @@ import React, { useEffect, useState, useRef } from "react";
 // />
 
 export default function TypingText({
-  texts = ["Hello, world!"],  
+  texts = ["Hello, world!"],
   typingSpeed = 60,
   pause = 1500,
   loop = true,

@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Vlažnost",
+    "wind_speed": "Veter",
+    "feels_like": "Občuti se kot",
+    "rain": "Dež",
+    "max": "Najvišja",
+    "min": "Najnižja",
+    "pressure": "Pritisk",
+    "visibility": "Vidnost",
+    "clouds": "Oblačnost",
+    "quick_stats": "Hitre statistike",
+    "sun_cycle": "Sončni cikel",
+    "sunrise": "Sončni vzhod",
+    "sunset": "Sončni zahod",
+    "daylight_progress": "Napredek dnevne svetlobe",
+    "next_hours": "Naslednje ure",
+    "air_alerts": "Zrak in opozorila",
+    "air_quality": "Kakovost zraka",
+    "active_alerts": "Aktivna opozorila",
+    "no_alerts": "Brez aktivnih opozoril",
+    "nighttime": "Noč",
+    "aqi_1": "Kakovost zraka je odlična",
+    "aqi_2": "Kakovost zraka je dobra",
+    "aqi_3": "Zmerna — občutljive skupine so lahko prizadete",
+    "aqi_4": "Slaba — zmanjšajte dejavnosti na prostem",
+    "aqi_5": "Zelo slaba — ne hodite ven",
+    "aqi_good": "Odlična",
+    "aqi_fair": "Dobra",
+    "aqi_moderate": "Zmerna",
+    "aqi_poor": "Slaba",
+    "aqi_very_poor": "Zelo slaba",
+    "hours": "ur",
+    "minutes": "minut",
+    "remaining": "preostalo"
+  },
+  "hourly": {
+    "title": "Podrobna urna napoved"
+  },
+  "daily": {
+    "title": "Podrobna 6-dnevna napoved",
+    "today": "Danes",
+    "tomorrow": "Jutri"
+  },
+  "menu": {
+    "Language": "Jezik",
+    "overview": "Pregled",
+    "hourly": "Po urah",
+    "Daily": "Dnevno"
+  },
+  "search": {
+    "placeholder": "Išči mesto…"
+  }
+}

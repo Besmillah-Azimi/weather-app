@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Nem",
+    "wind_speed": "Rüzgar",
+    "feels_like": "Hissedilen",
+    "rain": "Yağmur",
+    "max": "Yüksek",
+    "min": "Düşük",
+    "pressure": "Basınç",
+    "visibility": "Görüş Mesafesi",
+    "clouds": "Bulut Örtüsü",
+    "quick_stats": "Hızlı İstatistikler",
+    "sun_cycle": "Güneş Döngüsü",
+    "sunrise": "Gün Doğumu",
+    "sunset": "Gün Batımı",
+    "daylight_progress": "Gün Işığı İlerlemesi",
+    "next_hours": "Sonraki Saatler",
+    "air_alerts": "Hava ve Uyarılar",
+    "air_quality": "Hava Kalitesi",
+    "active_alerts": "Aktif Uyarılar",
+    "no_alerts": "Aktif uyarı yok",
+    "nighttime": "Gece",
+    "aqi_1": "Hava kalitesi mükemmel",
+    "aqi_2": "Hava kalitesi iyi",
+    "aqi_3": "Orta düzey — hassas gruplar etkilenebilir",
+    "aqi_4": "Kötü hava — dışarıda aktiviteyi azalt",
+    "aqi_5": "Çok kötü — dışarı çıkmayın",
+    "aqi_good": "Mükemmel",
+    "aqi_fair": "İyi",
+    "aqi_moderate": "Orta",
+    "aqi_poor": "Kötü",
+    "aqi_very_poor": "Çok Kötü",
+    "hours": "saat",
+    "minutes": "dakika",
+    "remaining": "kalan"
+  },
+  "hourly": {
+    "title": "Detaylı Saatlik Tahmin"
+  },
+  "daily": {
+    "title": "Detaylı 6 Günlük Tahmin",
+    "today": "Bugün",
+    "tomorrow": "Yarın"
+  },
+  "menu": {
+    "Language": "Dil",
+    "overview": "Genel",
+    "hourly": "Saatlik",
+    "Daily": "Günlük"
+  },
+  "search": {
+    "placeholder": "Şehir ara…"
+  }
+}

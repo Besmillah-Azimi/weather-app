@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "湿度",
+    "wind_speed": "风速",
+    "feels_like": "体感温度",
+    "rain": "降雨",
+    "max": "最高",
+    "min": "最低",
+    "pressure": "气压",
+    "visibility": "能见度",
+    "clouds": "云量",
+    "quick_stats": "快速统计",
+    "sun_cycle": "太阳周期",
+    "sunrise": "日出",
+    "sunset": "日落",
+    "daylight_progress": "日照进度",
+    "next_hours": "未来几小时",
+    "air_alerts": "空气与警报",
+    "air_quality": "空气质量",
+    "active_alerts": "活跃警报",
+    "no_alerts": "无活跃警报",
+    "nighttime": "夜晚",
+    "aqi_1": "空气质量极佳",
+    "aqi_2": "空气质量良好",
+    "aqi_3": "中等 — 敏感人群可能受影响",
+    "aqi_4": "较差 — 减少户外活动",
+    "aqi_5": "极差 — 避免外出",
+    "aqi_good": "极佳",
+    "aqi_fair": "良好",
+    "aqi_moderate": "中等",
+    "aqi_poor": "较差",
+    "aqi_very_poor": "极差",
+    "hours": "小时",
+    "minutes": "分钟",
+    "remaining": "剩余"
+  },
+  "hourly": {
+    "title": "详细小时预报"
+  },
+  "daily": {
+    "title": "详细6天预报",
+    "today": "今天",
+    "tomorrow": "明天"
+  },
+  "menu": {
+    "Language": "语言",
+    "overview": "概览",
+    "hourly": "每小时",
+    "Daily": "每日"
+  },
+  "search": {
+    "placeholder": "搜索城市…"
+  }
+}

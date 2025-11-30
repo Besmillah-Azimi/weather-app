@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Vogtigheid",
+    "wind_speed": "Wind",
+    "feels_like": "Voel soos",
+    "rain": "Reën",
+    "max": "Hoog",
+    "min": "Laag",
+    "pressure": "Druk",
+    "visibility": "Sigbaarheid",
+    "clouds": "Wolkbedekking",
+    "quick_stats": "Vinnige statistieke",
+    "sun_cycle": "Sonsiklus",
+    "sunrise": "Sonop",
+    "sunset": "Sonson",
+    "daylight_progress": "Daglig vooruitgang",
+    "next_hours": "Volgende ure",
+    "air_alerts": "Lug & Waarskuwings",
+    "air_quality": "Lugkwaliteit",
+    "active_alerts": "Aktiewe waarskuwings",
+    "no_alerts": "Geen aktiewe waarskuwings",
+    "nighttime": "Nag",
+    "aqi_1": "Lugkwaliteit is uitstekend",
+    "aqi_2": "Lugkwaliteit is goed",
+    "aqi_3": "Matig — sensitiewe groepe kan geraak word",
+    "aqi_4": "Swak — verminder buitelugaktiwiteite",
+    "aqi_5": "Baie swak — bly binnenshuis",
+    "aqi_good": "Uitstekend",
+    "aqi_fair": "Goed",
+    "aqi_moderate": "Matig",
+    "aqi_poor": "Swak",
+    "aqi_very_poor": "Baie swak",
+    "hours": "ure",
+    "minutes": "minute",
+    "remaining": "oorblywend"
+  },
+  "hourly": {
+    "title": "Gedetailleerde uurlikse voorspelling"
+  },
+  "daily": {
+    "title": "Gedetailleerde 6-dae voorspelling",
+    "today": "Vandag",
+    "tomorrow": "Môre"
+  },
+  "menu": {
+    "Language": "Taal",
+    "overview": "Oorsig",
+    "hourly": "Uurliks",
+    "Daily": "Daagliks"
+  },
+  "search": {
+    "placeholder": "Soek stad…"
+  }
+}

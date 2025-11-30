@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Humitat",
+    "wind_speed": "Vent",
+    "feels_like": "Sensació",
+    "rain": "Pluja",
+    "max": "Màx",
+    "min": "Mín",
+    "pressure": "Pressió",
+    "visibility": "Visibilitat",
+    "clouds": "Núvols",
+    "quick_stats": "Estadístiques ràpides",
+    "sun_cycle": "Cicle solar",
+    "sunrise": "Sortida del sol",
+    "sunset": "Posta de sol",
+    "daylight_progress": "Progrés de la llum diürna",
+    "next_hours": "Pròximes hores",
+    "air_alerts": "Aire i alertes",
+    "air_quality": "Qualitat de l'aire",
+    "active_alerts": "Alertes actives",
+    "no_alerts": "Sense alertes actives",
+    "nighttime": "Nit",
+    "aqi_1": "La qualitat de l'aire és excel·lent",
+    "aqi_2": "La qualitat de l'aire és bona",
+    "aqi_3": "Moderada — els grups sensibles poden veure's afectats",
+    "aqi_4": "Dolenta — reduïu les activitats a l'aire lliure",
+    "aqi_5": "Molt dolenta — eviteu sortir",
+    "aqi_good": "Excel·lent",
+    "aqi_fair": "Bona",
+    "aqi_moderate": "Moderada",
+    "aqi_poor": "Dolenta",
+    "aqi_very_poor": "Molt dolenta",
+    "hours": "hores",
+    "minutes": "minuts",
+    "remaining": "restant"
+  },
+  "hourly": {
+    "title": "Pronòstic detallat per hores"
+  },
+  "daily": {
+    "title": "Pronòstic detallat de 6 dies",
+    "today": "Avui",
+    "tomorrow": "Demà"
+  },
+  "menu": {
+    "Language": "Idioma",
+    "overview": "Resum",
+    "hourly": "Per hora",
+    "Daily": "Diari"
+  },
+  "search": {
+    "placeholder": "Cerca ciutat…"
+  }
+}

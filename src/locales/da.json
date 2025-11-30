@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Luftfugtighed",
+    "wind_speed": "Vind",
+    "feels_like": "Føles som",
+    "rain": "Regn",
+    "max": "Høj",
+    "min": "Lav",
+    "pressure": "Tryk",
+    "visibility": "Sigte",
+    "clouds": "Skydække",
+    "quick_stats": "Hurtige statistikker",
+    "sun_cycle": "Solcyklus",
+    "sunrise": "Solopgang",
+    "sunset": "Solnedgang",
+    "daylight_progress": "Dagslys fremgang",
+    "next_hours": "Næste timer",
+    "air_alerts": "Luft & Advarsler",
+    "air_quality": "Luftkvalitet",
+    "active_alerts": "Aktive advarsler",
+    "no_alerts": "Ingen aktive advarsler",
+    "nighttime": "Nat",
+    "aqi_1": "Luftkvaliteten er fremragende",
+    "aqi_2": "Luftkvaliteten er god",
+    "aqi_3": "Moderat — følsomme grupper kan påvirkes",
+    "aqi_4": "Dårlig — reducer udendørs aktiviteter",
+    "aqi_5": "Meget dårlig — undgå at gå udenfor",
+    "aqi_good": "Fremragende",
+    "aqi_fair": "God",
+    "aqi_moderate": "Moderat",
+    "aqi_poor": "Dårlig",
+    "aqi_very_poor": "Meget dårlig",
+    "hours": "timer",
+    "minutes": "minutter",
+    "remaining": "tilbage"
+  },
+  "hourly": {
+    "title": "Detaljeret timeprognose"
+  },
+  "daily": {
+    "title": "Detaljeret 6-dages prognose",
+    "today": "I dag",
+    "tomorrow": "I morgen"
+  },
+  "menu": {
+    "Language": "Sprog",
+    "overview": "Oversigt",
+    "hourly": "Timevis",
+    "Daily": "Daglig"
+  },
+  "search": {
+    "placeholder": "Søg by…"
+  }
+}

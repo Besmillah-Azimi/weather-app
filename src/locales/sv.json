@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Luftfuktighet",
+    "wind_speed": "Vind",
+    "feels_like": "Känns som",
+    "rain": "Regn",
+    "max": "Hög",
+    "min": "Låg",
+    "pressure": "Tryck",
+    "visibility": "Sikt",
+    "clouds": "Molnighet",
+    "quick_stats": "Snabbstatistik",
+    "sun_cycle": "Solcykel",
+    "sunrise": "Soluppgång",
+    "sunset": "Solnedgång",
+    "daylight_progress": "Dagsljusförlopp",
+    "next_hours": "Kommande timmar",
+    "air_alerts": "Luft och varningar",
+    "air_quality": "Luftkvalitet",
+    "active_alerts": "Aktiva varningar",
+    "no_alerts": "Inga aktiva varningar",
+    "nighttime": "Natt",
+    "aqi_1": "Luftkvalitet utmärkt",
+    "aqi_2": "Luftkvalitet bra",
+    "aqi_3": "Måttlig — känsliga grupper kan påverkas",
+    "aqi_4": "Dålig — minska utomhusaktivitet",
+    "aqi_5": "Mycket dålig — stanna inne",
+    "aqi_good": "Utmärkt",
+    "aqi_fair": "Bra",
+    "aqi_moderate": "Måttlig",
+    "aqi_poor": "Dålig",
+    "aqi_very_poor": "Mycket dålig",
+    "hours": "timmar",
+    "minutes": "minuter",
+    "remaining": "kvar"
+  },
+  "hourly": {
+    "title": "Detaljerad timprognos"
+  },
+  "daily": {
+    "title": "Detaljerad 6-dagarsprognos",
+    "today": "Idag",
+    "tomorrow": "Imorgon"
+  },
+  "menu": {
+    "Language": "Språk",
+    "overview": "Översikt",
+    "hourly": "Timvis",
+    "Daily": "Daglig"
+  },
+  "search": {
+    "placeholder": "Sök stad…"
+  }
+}

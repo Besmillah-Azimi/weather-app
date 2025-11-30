@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Umiditate",
+    "wind_speed": "Vânt",
+    "feels_like": "Resimțită",
+    "rain": "Ploaie",
+    "max": "Max",
+    "min": "Min",
+    "pressure": "Presiune",
+    "visibility": "Vizibilitate",
+    "clouds": "Noros",
+    "quick_stats": "Statistici rapide",
+    "sun_cycle": "Ciclul solar",
+    "sunrise": "Răsărit",
+    "sunset": "Apus",
+    "daylight_progress": "Progres lumină zi",
+    "next_hours": "Următoarele ore",
+    "air_alerts": "Aer & Alerte",
+    "air_quality": "Calitatea aerului",
+    "active_alerts": "Alerte active",
+    "no_alerts": "Nicio alertă activă",
+    "nighttime": "Noapte",
+    "aqi_1": "Calitatea aerului este excelentă",
+    "aqi_2": "Calitatea aerului este bună",
+    "aqi_3": "Moderată — grupurile sensibile pot fi afectate",
+    "aqi_4": "Proastă — reduceți activitățile în aer liber",
+    "aqi_5": "Foarte proastă — evitați să ieșiți",
+    "aqi_good": "Excelentă",
+    "aqi_fair": "Bună",
+    "aqi_moderate": "Moderată",
+    "aqi_poor": "Proastă",
+    "aqi_very_poor": "Foarte proastă",
+    "hours": "ore",
+    "minutes": "minute",
+    "remaining": "rămase"
+  },
+  "hourly": {
+    "title": "Prognoză detaliată orară"
+  },
+  "daily": {
+    "title": "Prognoză detaliată pe 6 zile",
+    "today": "Astăzi",
+    "tomorrow": "Mâine"
+  },
+  "menu": {
+    "Language": "Limba",
+    "overview": "Prezentare",
+    "hourly": "Orar",
+    "Daily": "Zilnic"
+  },
+  "search": {
+    "placeholder": "Caută oraș…"
+  }
+}

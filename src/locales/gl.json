@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Humidade",
+    "wind_speed": "Vento",
+    "feels_like": "Sensación",
+    "rain": "Chuvia",
+    "max": "Máx",
+    "min": "Mín",
+    "pressure": "Presión",
+    "visibility": "Visibilidade",
+    "clouds": "Nubosidade",
+    "quick_stats": "Estatísticas rápidas",
+    "sun_cycle": "Ciclo solar",
+    "sunrise": "Nacemento do sol",
+    "sunset": "Pór do sol",
+    "daylight_progress": "Progreso da luz diúrna",
+    "next_hours": "Próximas horas",
+    "air_alerts": "Aire e alertas",
+    "air_quality": "Calidade do aire",
+    "active_alerts": "Alertas activas",
+    "no_alerts": "Sen alertas activas",
+    "nighttime": "Noite",
+    "aqi_1": "A calidade do aire é excelente",
+    "aqi_2": "A calidade do aire é boa",
+    "aqi_3": "Moderada — os grupos sensibles poden verse afectados",
+    "aqi_4": "Mala — reduce as actividades ao aire libre",
+    "aqi_5": "Moi mala — evita saír",
+    "aqi_good": "Excelente",
+    "aqi_fair": "Boa",
+    "aqi_moderate": "Moderada",
+    "aqi_poor": "Mala",
+    "aqi_very_poor": "Moi mala",
+    "hours": "horas",
+    "minutes": "minutos",
+    "remaining": "restante"
+  },
+  "hourly": {
+    "title": "Previsión detallada por horas"
+  },
+  "daily": {
+    "title": "Previsión detallada de 6 días",
+    "today": "Hoxe",
+    "tomorrow": "Mañá"
+  },
+  "menu": {
+    "Language": "Idioma",
+    "overview": "Resumo",
+    "hourly": "Por hora",
+    "Daily": "Diario"
+  },
+  "search": {
+    "placeholder": "Buscar cidade…"
+  }
+}

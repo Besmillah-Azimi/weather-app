@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Vlažnost",
+    "wind_speed": "Vjetar",
+    "feels_like": "Osjeća se kao",
+    "rain": "Kiša",
+    "max": "Maks",
+    "min": "Min",
+    "pressure": "Tlak",
+    "visibility": "Vidljivost",
+    "clouds": "Oblačnost",
+    "quick_stats": "Brze statistike",
+    "sun_cycle": "Sunčev ciklus",
+    "sunrise": "Izlazak sunca",
+    "sunset": "Zalazak sunca",
+    "daylight_progress": "Napredak dnevnog svjetla",
+    "next_hours": "Sljedeći sati",
+    "air_alerts": "Zrak i upozorenja",
+    "air_quality": "Kvaliteta zraka",
+    "active_alerts": "Aktivna upozorenja",
+    "no_alerts": "Nema aktivnih upozorenja",
+    "nighttime": "Noć",
+    "aqi_1": "Kvaliteta zraka je izvrsna",
+    "aqi_2": "Kvaliteta zraka je dobra",
+    "aqi_3": "Umjerena — osjetljive skupine mogu osjetiti posljedice",
+    "aqi_4": "Loša — smanjite aktivnosti na otvorenom",
+    "aqi_5": "Vrlo loša — izbjegavajte izlazak",
+    "aqi_good": "Izvrsna",
+    "aqi_fair": "Dobra",
+    "aqi_moderate": "Umjerena",
+    "aqi_poor": "Loša",
+    "aqi_very_poor": "Vrlo loša",
+    "hours": "sati",
+    "minutes": "minuta",
+    "remaining": "preostalo"
+  },
+  "hourly": {
+    "title": "Detaljna satna prognoza"
+  },
+  "daily": {
+    "title": "Detaljna 6-dnevna prognoza",
+    "today": "Danas",
+    "tomorrow": "Sutra"
+  },
+  "menu": {
+    "Language": "Jezik",
+    "overview": "Pregled",
+    "hourly": "Po satu",
+    "Daily": "Dnevno"
+  },
+  "search": {
+    "placeholder": "Pretraži grad…"
+  }
+}

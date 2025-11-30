@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Luftfeuchtigkeit",
+    "wind_speed": "Wind",
+    "feels_like": "Gefühlte Temp.",
+    "rain": "Regen",
+    "max": "Hoch",
+    "min": "Tief",
+    "pressure": "Luftdruck",
+    "visibility": "Sichtweite",
+    "clouds": "Wolkenbedeckung",
+    "quick_stats": "Schnelle Statistiken",
+    "sun_cycle": "Sonnenzyklus",
+    "sunrise": "Sonnenaufgang",
+    "sunset": "Sonnenuntergang",
+    "daylight_progress": "Tageslichtfortschritt",
+    "next_hours": "Nächste Stunden",
+    "air_alerts": "Luft & Warnungen",
+    "air_quality": "Luftqualität",
+    "active_alerts": "Aktive Warnungen",
+    "no_alerts": "Keine aktiven Warnungen",
+    "nighttime": "Nacht",
+    "aqi_1": "Luftqualität hervorragend",
+    "aqi_2": "Luftqualität gut",
+    "aqi_3": "Mäßige Luft — empfindliche Gruppen können betroffen sein",
+    "aqi_4": "Schlechte Luft — Aktivitäten draußen reduzieren",
+    "aqi_5": "Sehr schlecht — draußen bleiben vermeiden",
+    "aqi_good": "Hervorragend",
+    "aqi_fair": "Gut",
+    "aqi_moderate": "Mäßig",
+    "aqi_poor": "Schlecht",
+    "aqi_very_poor": "Sehr schlecht",
+    "hours": "Stunden",
+    "minutes": "Minuten",
+    "remaining": "verbleibend"
+  },
+  "hourly": {
+    "title": "Detaillierte stündliche Vorhersage"
+  },
+  "daily": {
+    "title": "Detaillierte 6-Tage-Vorhersage",
+    "today": "Heute",
+    "tomorrow": "Morgen"
+  },
+  "menu": {
+    "Language": "Sprache",
+    "overview": "Übersicht",
+    "hourly": "Stündlich",
+    "Daily": "Täglich"
+  },
+  "search": {
+    "placeholder": "Stadt suchen…"
+  }
+}

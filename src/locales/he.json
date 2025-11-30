@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "לחות",
+    "wind_speed": "רוח",
+    "feels_like": "מרגיש כמו",
+    "rain": "גשם",
+    "max": "מקסימום",
+    "min": "מינימום",
+    "pressure": "לחץ",
+    "visibility": "ראות",
+    "clouds": "עננות",
+    "quick_stats": "סטטיסטיקות מהירות",
+    "sun_cycle": "מחזור השמש",
+    "sunrise": "זריחה",
+    "sunset": "שקיעה",
+    "daylight_progress": "התקדמות אור יום",
+    "next_hours": "השעות הקרובות",
+    "air_alerts": "אוויר והתרעות",
+    "air_quality": "איכות אוויר",
+    "active_alerts": "התרעות פעילות",
+    "no_alerts": "אין התרעות פעילות",
+    "nighttime": "לילה",
+    "aqi_1": "איכות האוויר מצוינת",
+    "aqi_2": "איכות האוויר טובה",
+    "aqi_3": "בינונית — קבוצות רגישות עלולות להיות מושפעות",
+    "aqi_4": "גרועה — צמצם פעילויות בחוץ",
+    "aqi_5": "גרועה מאוד — הישאר בפנים",
+    "aqi_good": "מצוינת",
+    "aqi_fair": "טובה",
+    "aqi_moderate": "בינונית",
+    "aqi_poor": "גרועה",
+    "aqi_very_poor": "גרועה מאוד",
+    "hours": "שעות",
+    "minutes": "דקות",
+    "remaining": "נותר"
+  },
+  "hourly": {
+    "title": "תחזית שעתית מפורטת"
+  },
+  "daily": {
+    "title": "תחזית מפורטת ל-6 ימים",
+    "today": "היום",
+    "tomorrow": "מחר"
+  },
+  "menu": {
+    "Language": "שפה",
+    "overview": "סקירה",
+    "hourly": "לפי שעה",
+    "Daily": "יומי"
+  },
+  "search": {
+    "placeholder": "חפש עיר…"
+  }
+}

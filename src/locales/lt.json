@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Drėgmė",
+    "wind_speed": "Vėjas",
+    "feels_like": "Jaučiasi kaip",
+    "rain": "Lietus",
+    "max": "Aukščiausia",
+    "min": "Žemiausia",
+    "pressure": "Slėgis",
+    "visibility": "Matomumas",
+    "clouds": "Debesuotumas",
+    "quick_stats": "Greitos statistikos",
+    "sun_cycle": "Saulės ciklas",
+    "sunrise": "Saulėtekis",
+    "sunset": "Saulėlydis",
+    "daylight_progress": "Dienos šviesos pažanga",
+    "next_hours": "Kitos valandos",
+    "air_alerts": "Oras ir įspėjimai",
+    "air_quality": "Oro kokybė",
+    "active_alerts": "Aktyvūs įspėjimai",
+    "no_alerts": "Nėra aktyvių įspėjimų",
+    "nighttime": "Naktis",
+    "aqi_1": "Oro kokybė yra puiki",
+    "aqi_2": "Oro kokybė yra gera",
+    "aqi_3": "Vidutinė — jautrios grupės gali būti paveiktos",
+    "aqi_4": "Prasta — sumažinkite veiklą lauke",
+    "aqi_5": "Labai prasta — likite viduje",
+    "aqi_good": "Puiki",
+    "aqi_fair": "Gera",
+    "aqi_moderate": "Vidutinė",
+    "aqi_poor": "Prasta",
+    "aqi_very_poor": "Labai prasta",
+    "hours": "valandos",
+    "minutes": "minutės",
+    "remaining": "liko"
+  },
+  "hourly": {
+    "title": "Detali valandinė prognozė"
+  },
+  "daily": {
+    "title": "Detali 6 dienų prognozė",
+    "today": "Šiandien",
+    "tomorrow": "Rytoj"
+  },
+  "menu": {
+    "Language": "Kalba",
+    "overview": "Apžvalga",
+    "hourly": "Kas valandą",
+    "Daily": "Dienos"
+  },
+  "search": {
+    "placeholder": "Ieškoti miesto…"
+  }
+}

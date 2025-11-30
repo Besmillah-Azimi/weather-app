@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Nermî",
+    "wind_speed": "Ba",
+    "feels_like": "Hest dike",
+    "rain": "Baran",
+    "max": "Bilind",
+    "min": "Kêm",
+    "pressure": "Zext",
+    "visibility": "Dîtin",
+    "clouds": "Ewr",
+    "quick_stats": "Statîstîkên bilez",
+    "sun_cycle": "Çerxa rojê",
+    "sunrise": "Rojhilatin",
+    "sunset": "Rojavabûn",
+    "daylight_progress": "Pêşveçûna ronahiyê",
+    "next_hours": "Saetên din",
+    "air_alerts": "Hewa û hişyariyan",
+    "air_quality": "Qalîteya hewayê",
+    "active_alerts": "Hişyariyên çalak",
+    "no_alerts": "Hişyariyên çalak tune",
+    "nighttime": "Şev",
+    "aqi_1": "Kalîteya hewayê zêde baş e",
+    "aqi_2": "Kalîteya hewayê baş e",
+    "aqi_3": "Navîn — kesên hestîyar dikarin bikin hest",
+    "aqi_4": "Xerab — çalakiyên derve kêm bikin",
+    "aqi_5": "Pir xerab — derve dernekevin",
+    "aqi_good": "Zêde baş",
+    "aqi_fair": "Baş",
+    "aqi_moderate": "Navîn",
+    "aqi_poor": "Xerab",
+    "aqi_very_poor": "Pir xerab",
+    "hours": "saet",
+    "minutes": "deqîqe",
+    "remaining": "mayî"
+  },
+  "hourly": {
+    "title": "Pêşbîniya demjimêrî ya hûrgulî"
+  },
+  "daily": {
+    "title": "Pêşbîniya 6-rojî ya hûrgulî",
+    "today": "Îro",
+    "tomorrow": "Sibê"
+  },
+  "menu": {
+    "Language": "Ziman",
+    "overview": "Guhertin",
+    "hourly": "Demjimêrî",
+    "Daily": "Rojane"
+  },
+  "search": {
+    "placeholder": "Bajar bigere…"
+  }
+}

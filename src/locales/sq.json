@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Lagështia",
+    "wind_speed": "Era",
+    "feels_like": "Ndjehet si",
+    "rain": "Shi",
+    "max": "Max",
+    "min": "Min",
+    "pressure": "Presioni",
+    "visibility": "Shikueshmëria",
+    "clouds": "Re",
+    "quick_stats": "Statistika të shpejta",
+    "sun_cycle": "Cikli diellor",
+    "sunrise": "Lindja e diellit",
+    "sunset": "Perëndimi i diellit",
+    "daylight_progress": "Progresi i dritës së ditës",
+    "next_hours": "Orët e ardhshme",
+    "air_alerts": "Ajri & Alarme",
+    "air_quality": "Cilësia e ajrit",
+    "active_alerts": "Alarme aktive",
+    "no_alerts": "Nuk ka alarme aktive",
+    "nighttime": "Natë",
+    "aqi_1": "Cilësia e ajrit është e shkëlqyer",
+    "aqi_2": "Cilësia e ajrit është e mirë",
+    "aqi_3": "Mesatare — grupet e ndjeshme mund të preken",
+    "aqi_4": "E dobët — ulni aktivitetet në natyrë",
+    "aqi_5": "Shumë e keqe — shmangni daljen jashtë",
+    "aqi_good": "Shkëlqyer",
+    "aqi_fair": "E mirë",
+    "aqi_moderate": "Mesatare",
+    "aqi_poor": "E dobët",
+    "aqi_very_poor": "Shumë e keqe",
+    "hours": "orë",
+    "minutes": "minuta",
+    "remaining": "mbetur"
+  },
+  "hourly": {
+    "title": "Parashikim i detajuar orar"
+  },
+  "daily": {
+    "title": "Parashikim i detajuar 6-ditor",
+    "today": "Sot",
+    "tomorrow": "Nesër"
+  },
+  "menu": {
+    "Language": "Gjuha",
+    "overview": "Përmbledhje",
+    "hourly": "Çdo orë",
+    "Daily": "Ditore"
+  },
+  "search": {
+    "placeholder": "Kërko qytet…"
+  }
+}

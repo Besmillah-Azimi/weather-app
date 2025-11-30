@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Páratartalom",
+    "wind_speed": "Szél",
+    "feels_like": "Hőérzet",
+    "rain": "Eső",
+    "max": "Max",
+    "min": "Min",
+    "pressure": "Légnyomás",
+    "visibility": "Látótávolság",
+    "clouds": "Felhőzet",
+    "quick_stats": "Gyors statisztika",
+    "sun_cycle": "Napciklus",
+    "sunrise": "Napkelte",
+    "sunset": "Napnyugta",
+    "daylight_progress": "Nappali világosság",
+    "next_hours": "Következő órák",
+    "air_alerts": "Levegő és figyelmeztetések",
+    "air_quality": "Levegőminőség",
+    "active_alerts": "Aktív figyelmeztetések",
+    "no_alerts": "Nincs aktív figyelmeztetés",
+    "nighttime": "Éjszaka",
+    "aqi_1": "A levegő minősége kiváló",
+    "aqi_2": "A levegő minősége jó",
+    "aqi_3": "Közepes — az érzékeny csoportok érintettek lehetnek",
+    "aqi_4": "Rossz — csökkentse a szabadtéri tevékenységet",
+    "aqi_5": "Nagyon rossz — maradjon bent",
+    "aqi_good": "Kiváló",
+    "aqi_fair": "Jó",
+    "aqi_moderate": "Közepes",
+    "aqi_poor": "Rossz",
+    "aqi_very_poor": "Nagyon rossz",
+    "hours": "óra",
+    "minutes": "perc",
+    "remaining": "maradt"
+  },
+  "hourly": {
+    "title": "Részletes órás előrejelzés"
+  },
+  "daily": {
+    "title": "Részletes 6 napos előrejelzés",
+    "today": "Ma",
+    "tomorrow": "Holnap"
+  },
+  "menu": {
+    "Language": "Nyelv",
+    "overview": "Áttekintés",
+    "hourly": "Óránként",
+    "Daily": "Napi"
+  },
+  "search": {
+    "placeholder": "Város keresése…"
+  }
+}

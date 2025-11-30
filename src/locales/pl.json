@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Wilgotność",
+    "wind_speed": "Wiatr",
+    "feels_like": "Odczuwalna",
+    "rain": "Deszcz",
+    "max": "Maks.",
+    "min": "Min.",
+    "pressure": "Ciśnienie",
+    "visibility": "Widoczność",
+    "clouds": "Zachmurzenie",
+    "quick_stats": "Szybkie statystyki",
+    "sun_cycle": "Cykl słoneczny",
+    "sunrise": "Wschód słońca",
+    "sunset": "Zachód słońca",
+    "daylight_progress": "Postęp światła dziennego",
+    "next_hours": "Najbliższe godziny",
+    "air_alerts": "Powietrze i alerty",
+    "air_quality": "Jakość powietrza",
+    "active_alerts": "Aktywne alerty",
+    "no_alerts": "Brak aktywnych alertów",
+    "nighttime": "Noc",
+    "aqi_1": "Jakość powietrza doskonała",
+    "aqi_2": "Jakość powietrza dobra",
+    "aqi_3": "Umiarkowana — wrażliwi mogą odczuwać",
+    "aqi_4": "Zła — ograniczyć aktywność na zewnątrz",
+    "aqi_5": "Bardzo zła — nie wychodzić",
+    "aqi_good": "Doskonała",
+    "aqi_fair": "Dobra",
+    "aqi_moderate": "Umiarkowana",
+    "aqi_poor": "Zła",
+    "aqi_very_poor": "Bardzo zła",
+    "hours": "godzin",
+    "minutes": "minut",
+    "remaining": "pozostało"
+  },
+  "hourly": {
+    "title": "Szczegółowa prognoza godzinowa"
+  },
+  "daily": {
+    "title": "Szczegółowa prognoza 6-dniowa",
+    "today": "Dzisiaj",
+    "tomorrow": "Jutro"
+  },
+  "menu": {
+    "Language": "Język",
+    "overview": "Przegląd",
+    "hourly": "Godzinowo",
+    "Daily": "Dziennie"
+  },
+  "search": {
+    "placeholder": "Szukaj miasta…"
+  }
+}

@@ -1,3 +1,4 @@
+import { useLanguage } from "../contexts/LanguageContext";
 import { del } from "framer-motion/client";
 import React, { useEffect, useState } from "react";
 
@@ -6,8 +7,11 @@ export default function CountUp({
   duration = 1.5,
   delay = 0,
   className = "",
+  toLocal = false,
 }) {
   const [count, setCount] = useState(0);
+
+  const { language } = useLanguage();
 
   useEffect(() => {
     const startTimeout = setTimeout(() => {
@@ -35,5 +39,9 @@ export default function CountUp({
     return () => clearTimeout(startTimeout);
   }, [to, duration, delay]);
 
-  return <span className={className}>{count.toLocaleString()}</span>;
+  return (
+    <span className={className}>
+      {count.toLocaleString(toLocal ? language : "en-US")}
+    </span>
+  );
 }

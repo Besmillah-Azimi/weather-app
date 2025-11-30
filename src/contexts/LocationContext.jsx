@@ -1,47 +1,41 @@
-import { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect, useContext } from "react";
 import axios from "axios";
 
 export const LocationContext = createContext();
 
 export default function LocationProvider({ children }) {
-  const [location, setLocation] = useState(null);
-  const [error, setError] = useState(null);
+  const [location, setLocation] = React.useState(null);
+  const [error, setError] = React.useState(null);
 
   const [city, setCity] = useState("");
 
-  useEffect(() => {
-    // Step 1: Get coordinates from browser
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        async (position) => {
-          const { latitude, longitude } = position.coords;
-
-          // Step 2: Get city from coordinates (using BigDataCloud API)
-          const res = await axios
-            .get(
-              `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`
-            )
-            .then((res) => {
-              if (res.data.city) {
-                setLocation(res.data.city);
-              } else if (res.data.locality) {
-                setLocation(res.data.locality);
-              } else {
-                setLocation("Unknown location");
-              }
-            })
-            .catch((error) => {
-              setError(error);
-            });
-        },
-        (err) => {
-          console.error(err);
-          setError("Permission denied or location unavailable");
-        }
-      );
-    } else {
-      setError("Geolocation not supported by your browser");
+  const getLocation = () => {
+    if (!navigator.geolocation) {
+      setError("Geolocation is not supported by your browser");
+      return;
     }
+
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        setLocation({
+          lat: position.coords.latitude,
+          lon: position.coords.longitude,
+        });
+      },
+      (err) => {
+        setError(err.message);
+        console.error(err.message);
+      },
+      {
+        enableHighAccuracy: true,
+        timeout: 10000,
+        maximumAge: 0,
+      }
+    );
+  };
+
+  useEffect(() => {
+    getLocation();
   }, []);
 
   return (
@@ -50,3 +44,5 @@ export default function LocationProvider({ children }) {
     </LocationContext>
   );
 }
+
+export const useLocation = () => useContext(LocationContext);

@@ -1,0 +1,54 @@
+{
+  "overview": {
+    "humidity": "Hezetasuna",
+    "wind_speed": "Haizea",
+    "feels_like": "Sentipena",
+    "rain": "Euria",
+    "max": "Gehien",
+    "min": "Gutxien",
+    "pressure": "Presioa",
+    "visibility": "Ikusgarritasuna",
+    "clouds": "Hodei estaldura",
+    "quick_stats": "Estatistika azkarrak",
+    "sun_cycle": "Eguzki zikloa",
+    "sunrise": "Egunsentia",
+    "sunset": "Ilunabarra",
+    "daylight_progress": "Eguzki argiaren aurrerapena",
+    "next_hours": "Hurrengo orduak",
+    "air_alerts": "Airea eta alertak",
+    "air_quality": "Airearen kalitatea",
+    "active_alerts": "Alerta aktiboak",
+    "no_alerts": "Ez dago alerta aktiborik",
+    "nighttime": "Gaua",
+    "aqi_1": "Airearen kalitatea bikaina da",
+    "aqi_2": "Airearen kalitatea ona da",
+    "aqi_3": "Ertaina — talde sentikorrak kaltetuta egon daitezke",
+    "aqi_4": "Txarra — murriztu kanpoko jarduerak",
+    "aqi_5": "Oso txarra — ez irten kanpora",
+    "aqi_good": "Bikaina",
+    "aqi_fair": "Ona",
+    "aqi_moderate": "Ertaina",
+    "aqi_poor": "Txarra",
+    "aqi_very_poor": "Oso txarra",
+    "hours": "hours",
+    "minutes": "minutes",
+    "remaining": "remaining"
+  },
+  "hourly": {
+    "title": "Orduko iragarpen zehatza"
+  },
+  "daily": {
+    "title": "6 eguneko iragarpen zehatza",
+    "today": "Gaur",
+    "tomorrow": "Bihar"
+  },
+  "menu": {
+    "Language": "Language",
+    "overview": "Overview",
+    "hourly": "Hourly",
+    "Daily": "Daily"
+  },
+  "search": {
+    "placeholder": "Search city…"
+  }
+}
