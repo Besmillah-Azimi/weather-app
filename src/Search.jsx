@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect, useContext } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import { useWeather } from "./contexts/WeatherContext";
 import { useTranslation } from "react-i18next";

@@ -1,5 +1,4 @@
 import { useLanguage } from "../contexts/LanguageContext";
-import { del } from "framer-motion/client";
 import React, { useEffect, useState } from "react";
 
 export default function CountUp({

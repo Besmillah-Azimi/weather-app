@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useRef } from "react";
-import { WeatherContext } from "../contexts/WeatherContext";
+import React, { useEffect, useRef } from "react";
+import { useWeather } from "../contexts/WeatherContext";
 
 export default function WeatherBackground() {
-  const { state } = useContext(WeatherContext);
+  const { state } = useWeather();
   const { rain, snow, lightning, clouds, timeOfDay, wind } = state;
 
   const canvasRef = useRef(null);
