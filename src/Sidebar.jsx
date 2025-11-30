@@ -1,10 +1,10 @@
-import React, { useContext, useEffect, useState } from "react";
-import { TabContext } from "./contexts/TabContext";
-import { LanguageContext } from "./contexts/LanguageContext";
-import { TranslateContext } from "./contexts/Translate";
+import React, { useState } from "react";
+import { useTab } from "./contexts/TabContext";
+import { useLanguage } from "./contexts/LanguageContext";
 import { motion, AnimatePresence } from "framer-motion";
 
 import LanguageModal from "./style_components/LanguageModal";
+import { useTranslation } from "react-i18next";
 
 const icons = {
   menu: (
@@ -89,50 +89,27 @@ const icons = {
   ),
 };
 
-const menuItems = [
-  { id: "Overview", title: "Current", icon: icons.overview },
-  { id: "Hourly", title: "Hourly", icon: icons.hourly },
-  { id: "6 Days", title: "6 Days", icon: icons.calendar },
-  { id: "languages", title: "Languages", icon: icons.language },
-];
-
 export default function Sidebar() {
-  const { translateText } = useContext(TranslateContext);
+  const { isRTL } = useLanguage();
+  const { t } = useTranslation();
+
+  const menuItems = [
+    { id: "Overview", title: t("menu.overview"), icon: icons.overview },
+    { id: "Hourly", title: t("menu.hourly"), icon: icons.hourly },
+    { id: "6 Days", title: t("menu.Daily"), icon: icons.calendar },
+    { id: "languages", title: t("menu.Language"), icon: icons.language },
+  ];
   const { language, setLanguage, langs, langModal, setLangModal } =
-    useContext(LanguageContext);
-  const { setActiveTab } = useContext(TabContext);
+    useLanguage();
+  const { setActiveTab } = useTab();
 
-  const [translatedMenu, setTranslatedMenu] = useState(menuItems);
   const [isOpen, setIsOpen] = useState(false);
-  const [dropdown, setDropdown] = useState(false);
-
-  // Translate menu when language changes
-  useEffect(() => {
-    const translateMenu = async () => {
-      try {
-        const newMenu = await Promise.all(
-          menuItems.map(async (item) => ({
-            ...item,
-            title: await translateText(item.title),
-          }))
-        );
-        setTranslatedMenu(newMenu);
-      } catch (err) {
-        console.error("Translation error:", err);
-      }
-    };
-    translateMenu();
-  }, [language]);
-
-  // Auto-close dropdown when sidebar closes
-  useEffect(() => {
-    if (!isOpen) setDropdown(false);
-  }, [isOpen]);
 
   return (
     <>
       <motion.div
         initial={{ width: 60, height: 60 }}
+        dir={isRTL ? "rtl" : "ltr"}
         animate={{
           width: isOpen ? 224 : 60,
           height: isOpen ? "100%" : 60,
@@ -159,7 +136,7 @@ export default function Sidebar() {
                 : "flex-row justify-around items-center gap-2 py-2 md:flex-col bg-white/10 backdrop-blur-sm md:justify-start md:space-y-2 md:gap-0"
             }`}
         >
-          {translatedMenu.map((item) => (
+          {menuItems.map((item) => (
             <li key={item.id} className="relative">
               <button
                 onClick={() => {

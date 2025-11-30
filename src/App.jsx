@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import Sidebar from "./Sidebar";
 import WeatherDashboard from "./tabs/Overview";
 import { TabContext } from "./contexts/TabContext";
@@ -11,8 +11,7 @@ import LanguageModal from "./style_components/LanguageModal";
 
 import "./App.css";
 
-import { LanguageContext, useLanguage } from "./contexts/LanguageContext";
-import { TranslateContext } from "./contexts/Translate";
+import { useLanguage } from "./contexts/LanguageContext";
 import { useTranslation } from "react-i18next";
 
 const icons = {
@@ -149,8 +148,11 @@ export default function () {
           magnification={70}
           className="z-50"
         />
-        {/* </LiquidGlass> */}
       </div>
+
+      {/* this is a speperated Sidebar if needed. 
+      Just Uncomment it.
+       */}
       {/* <div className="hidden md:flex">
         <Sidebar />
       </div> */}

@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 
 export const TabContext = createContext();
 
@@ -8,3 +8,4 @@ export default function TabProvider({ children }) {
     <TabContext value={{ activeTab, setActiveTab }}>{children}</TabContext>
   );
 }
+export const useTab = () => useContext(TabContext);
