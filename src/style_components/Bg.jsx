@@ -386,17 +386,7 @@ export default function WeatherBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 w-screen h-screen -z-10 pointer-events-none bg-green-400"
-      style={{
-        width: "100vw",
-        height: "100dvh", // This is the key!
-        maxHeight: "100dvh",
-        objectFit: "cover",
-        bottom: 0,
-        right: 0,
-        top: 0,
-        left: 0,
-      }}
+      className="fixed inset-0 w-full h-full -z-10 pointer-events-none vh-100"
     />
   );
 }
