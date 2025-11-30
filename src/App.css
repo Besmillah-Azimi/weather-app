@@ -2,21 +2,6 @@
 @import "tw-animate-css";
 @custom-variant dark (&:is(.dark *));
 
-/* main background css */
-.canvas-background {
-  position: fixed;
-  inset: 0;
-  width: 100vw;
-  width: 100dvw; /* dynamic viewport width */
-  height: 100dvh; /* THIS IS THE MAGIC ONE */
-  /* fallback chain for maximum compatibility */
-  height: 100svh;
-  height: 100lvh;
-  height: 100vh;
-  z-index: -10;
-  pointer-events: none;
-}
-
 /* Cloud Loader */
 /* From Uiverse.io by andrew-manzyk */
 .loader {

@@ -383,5 +383,18 @@ export default function WeatherBackground() {
     };
   }, [timeOfDay, clouds, rain, snow, lightning, wind]);
 
-  return <canvas ref={canvasRef} className="canvas-background" />;
+  return (
+    <canvas
+      ref={canvasRef}
+      className="fixed inset-0 w-screen h-screen -z-10 pointer-events-none"
+      style={{
+        width: "100vw",
+        height: "100dvh", // This is the key!
+        maxHeight: "100dvh",
+        objectFit: "cover",
+        top: 0,
+        left: 0,
+      }}
+    />
+  );
 }
