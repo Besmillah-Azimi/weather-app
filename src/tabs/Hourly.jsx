@@ -7,7 +7,6 @@ import TypingText from "../style_components/TypingText";
 import CountUp from "../style_components/Countup";
 import Loader from "../style_components/Loader";
 import { useTranslation } from "react-i18next";
-import LocationBadge from "../style_components/locationBadge";
 
 const Hourly = () => {
   const {
