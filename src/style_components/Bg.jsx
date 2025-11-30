@@ -383,10 +383,5 @@ export default function WeatherBackground() {
     };
   }, [timeOfDay, clouds, rain, snow, lightning, wind]);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      className="fixed inset-0 w-full h-full -z-10 pointer-events-none top-0 left-0 bottom-0 right-0"
-    />
-  );
+  return <canvas ref={canvasRef} className="canvas-background" />;
 }
