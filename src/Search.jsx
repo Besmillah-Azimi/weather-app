@@ -103,7 +103,7 @@ export default function GlassSearch() {
 
         <input
           type="text"
-          placeholder={t("search.placeholder")}
+          placeholder={t("search.placeholder") + "mamalala"}
           dir={isRTL ? "rtl" : "ltr"}
           className="flex-1 bg-transparent text-white placeholder-white/60 text-base outline-none"
           value={query}
