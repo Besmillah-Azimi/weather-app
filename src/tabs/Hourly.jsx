@@ -103,8 +103,6 @@ const Hourly = () => {
 
       {!loading && error && <p className="text-center text-red-400">{error}</p>}
 
-      <LocationBadge width={200} height={50} label="Quetta, Pakistan" />
-
       {!loading && !error && hourly.length > 0 && (
         <motion.div
           variants={container}

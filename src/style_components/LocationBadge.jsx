@@ -8,6 +8,9 @@ export default function LocationBadge({
   const finalWidth = size ? size : width;
   const finalHeight = size ? size * (height / width) : height;
 
+  // Usage :
+  // <LocationBadge width={200} height={50} label="Quetta, Pakistan" />
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
