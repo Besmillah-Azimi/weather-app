@@ -386,7 +386,7 @@ export default function WeatherBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 w-screen h-screen -z-10 pointer-events-none"
+      className="fixed inset-0 w-screen h-screen -z-10 pointer-events-none overflow-hidden "
       style={{
         width: "100vw",
         height: "100dvh", // This is the key!
