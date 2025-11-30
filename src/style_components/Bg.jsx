@@ -386,7 +386,7 @@ export default function WeatherBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 w-full h-full -z-10 pointer-events-none vw-100 vh-100 w-screen h-screen"
+      className="fixed inset-0 w-full h-full -z-10 pointer-events-none top-0 left-0 bottom-0 right-0"
     />
   );
 }
