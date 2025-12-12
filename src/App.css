@@ -1,9 +1,192 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@custom-variant dark (&:is(.dark *));
+
+/* Header text styles */
+.header-RTL {
+  font-family: "Alfa Slab One", serif;
+  font-weight: 1000;
+  font-style: normal;
+}
+
+/* Parent container for split text (simple system font fallback) */
+.split-parent {
+  display: inline-block;
+  line-height: 1.05;
+  font-weight: 700;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial;
+  letter-spacing: 0.02em;
+  font-size: 1.25rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--lg-text, #fff);
+}
+
+/* Individual character styling */
+.split-char {
+  display: inline-block;
+  white-space: pre;
+  transform-origin: center bottom;
+  will-change: transform, opacity;
+}
+
+.split-space {
+  white-space: pre;
+  display: inline-block;
+  width: 0.45rem;
+}
+
+/* When a char finishes animating we remove its box so it aligns seamlessly */
+.split-char-animated {
+  display: contents;
+}
+
+/* Slight responsive sizing */
+@media (min-width: 768px) {
+  .split-parent {
+    font-size: 1.6rem;
+  }
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  --lg-bg-color: rgba(255, 255, 255, 0.5);
+  --lg-highlight: rgba(255, 255, 255, 0.85);
+  --lg-text: #ffffff;
+  --lg-hover-glow: rgba(255, 255, 255, 0.75);
+  --lg-red: #fb4268;
+  --lg-grey: #fffff2;
+}
+
+/* Location Ribbon Badge */
+.ribbon {
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  white-space: nowrap;
+}
+.ribbon {
+  --r: 0.8em; /* control the cutout */
+
+  border-block: 0.5em solid #0000;
+  padding-inline: 0.5em calc(var(--r) + 0.25em);
+  line-height: 1.8;
+  clip-path: polygon(
+    100% 0,
+    0 0,
+    0 100%,
+    100% 100%,
+    calc(100% - var(--r)) calc(100% - 0.25em),
+    100% 50%,
+    calc(100% - var(--r)) 0.25em
+  ); /* the color  */
+  width: fit-content;
+}
+/* Liquid glass for alerts */
+.glass-alert {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px) saturate(200%);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),
+    inset 0 4px 20px rgba(255, 255, 255, 0.3);
+}
+.glass-alert::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+  backdrop-filter: blur(1px);
+  box-shadow: inset -10px -8px 0px -11px rgba(255, 255, 255, 1),
+    inset 0px -9px 0px -8px rgba(255, 255, 255, 1);
+  opacity: 0.6;
+  z-index: -1;
+  filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(115%);
+}
+
+/* Liquid Glass */
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),
+    inset 0 4px 20px rgba(255, 255, 255, 0.3);
+}
+.glass::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  backdrop-filter: blur(1px);
+  box-shadow: inset -10px -8px 0px -11px rgba(255, 255, 255, 1),
+    inset 0px -9px 0px -8px rgba(255, 255, 255, 1);
+  opacity: 0.6;
+  filter: blur(1px) drop-shadow(10px 4px 6px black) brightness(115%);
+}
+
+/* Real Liquid glass for Taskbar */
+
+.glass-container {
+  color: var(--lg-text);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: transparent;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2),
+    inset 0 4px 20px rgba(255, 255, 255, 0.3);
+}
+
+.glass-filter,
+.glass-overlay,
+.glass-specular {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  backdrop-filter: blur(2px);
+  filter: url(#lg-dist);
+  isolation: isolate;
+}
+
+.glass-content > svg {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
 
 /* Cloud Loader */
-/* From Uiverse.io by andrew-manzyk */
 .loader {
   --cloud-color: #4387f4;
   --arrows-color: #80b1ff;
@@ -184,41 +367,6 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
-}
-
-:root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
 }
 
 .dark {

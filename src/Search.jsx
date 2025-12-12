@@ -5,13 +5,15 @@ import { useTranslation } from "react-i18next";
 import { useLanguage } from "./contexts/LanguageContext";
 import { useLocation } from "./contexts/LocationContext";
 
+import LocationBadge from "./style_components/LocationBadge";
+
 export default function GlassSearch() {
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const containerRef = useRef();
 
-  const { API_KEY } = useWeather();
+  const { API_KEY, weather, fullCountry } = useWeather();
   const { setCity } = useLocation();
 
   // ⏳ Debounce timer
@@ -75,14 +77,14 @@ export default function GlassSearch() {
     setQuery("");
     setSuggestions([]);
     setShowSuggestions(false);
+    setCity("");
   };
 
   return (
     <div className="max-w-lg mx-auto px-6 py-10" ref={containerRef}>
       {/* 🔍 Search Bar */}
       <div
-        className="flex items-center gap-3 px-4 py-3 rounded-3xl
-                   bg-white/10 backdrop-blur-lg border border-white/20
+        className=" relative flex items-center gap-3 px-4 py-3 rounded-3xl glass
                    shadow-lg hover:shadow-xl transition-all duration-200
                    focus-within:ring-2 focus-within:ring-indigo-400/40"
       >
@@ -105,7 +107,7 @@ export default function GlassSearch() {
           type="text"
           placeholder={t("search.placeholder")}
           dir={isRTL ? "rtl" : "ltr"}
-          className="flex-1 bg-transparent text-white placeholder-white/60 text-base outline-none"
+          className="flex-1 bg-transparent text-white z-40 placeholder-white/60 text-base outline-none"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => query && setShowSuggestions(true)}
@@ -139,7 +141,7 @@ export default function GlassSearch() {
       {/* 📌 Suggestions */}
       {showSuggestions && suggestions.length > 0 && (
         <ul
-          className="mt-2 rounded-xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg
+          className="mt-2 rounded-xl glass shadow-lg
                      max-h-56 overflow-auto p-2 space-y-1 animate-fadeIn"
         >
           {suggestions.map((city, i) => (

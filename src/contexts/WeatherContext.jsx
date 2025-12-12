@@ -22,13 +22,13 @@ export default function WeatherProvider({ children }) {
 
   const API_KEY = "0394d321ae430d0c9b13209d3cde0e76";
 
-  const { loading, setLoading, language } = useLanguage();
+  const { loading, setLoading, language, alert, setAlert } = useLanguage();
 
   const [weather, setWeather] = useState(null);
 
   const [targetCity, setTargetCity] = useState(null);
 
-  const { city, location } = useLocation();
+  const { city, location, setCity } = useLocation();
 
   const [fullCountry, setFullCountry] = useState("");
 
@@ -65,16 +65,17 @@ export default function WeatherProvider({ children }) {
   };
 
   const WeatherFetch = async () => {
-    if (!targetCity) return;
-
-    await axios
-      .get(
+    if (!targetCity) return; // ⛔ avoid fetching early
+    try {
+      const res = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?${targetCity}&appid=${API_KEY}&units=metric&lang=${language}`
-      )
-      .then((res) => {
+      );
+
+      if (res.data.cod === 200) {
         const regionNames = new Intl.DisplayNames([language], {
           type: "region",
         });
+
         const fullCountryName = regionNames.of(res.data.sys?.country); // "Pakistan"
         setFullCountry(fullCountryName);
         setWeather(res.data);
@@ -100,6 +101,7 @@ export default function WeatherProvider({ children }) {
         } else if (weatherId >= 600 && weatherId < 700) {
           // Snow
           dispatch({ type: WEATHER_ACTIONS.SET_SNOW, payload: true });
+          dispatch({ type: WEATHER_ACTIONS.SET_CLOUDS, payload: true });
         } else if (weatherId >= 700 && weatherId < 800) {
           // Atmosphere (mist, smoke, haze, dust, fog)
           dispatch({ type: WEATHER_ACTIONS.SET_WIND, payload: true });
@@ -134,12 +136,29 @@ export default function WeatherProvider({ children }) {
             payload: "night",
           });
         }
-      });
+      }
+    } catch (error) {
+      // ❗ Axios throws error for 404
+      if (error.response?.status === 404) {
+        setAlert({
+          active: true,
+          type: "error",
+          message: "City not found. Showing your current location.",
+        });
+        setCity("");
+      } else {
+        setAlert({
+          active: true,
+          type: "error",
+          message: "Network error. Please check your internet connection.",
+        });
+      }
+    }
   };
 
   useEffect(() => {
     WeatherFetch();
-  }, [targetCity, language]);
+  }, [targetCity, language, city]);
   return (
     <WeatherContext.Provider
       value={{

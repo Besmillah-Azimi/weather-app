@@ -1,3 +1,4 @@
+import Alert from "../style_components/Alert";
 import { createContext, useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -9,7 +10,7 @@ export default function LanguageProvider({ children }) {
 
   const [loading, setLoading] = useState(false);
   const [langModal, setLangModal] = useState(false);
-  const [alert, setAlert] = useState({ show: false, message: "" });
+  const [alert, setAlert] = useState({ type: "", active: false, message: "" });
   // لیست زبان‌ها (la → lv اصلاح شد)
   const langs = [
     { code: "sq", name: "Albanian" },
@@ -63,7 +64,6 @@ export default function LanguageProvider({ children }) {
     const handleChange = (lng) => {
       setLanguage(lng);
       localStorage.setItem("appLanguage", lng);
-      setAlert({show: true})
     };
 
     i18n.on("languageChanged", handleChange);
@@ -75,6 +75,12 @@ export default function LanguageProvider({ children }) {
   // وقتی از Context زبان عوض شد، به i18n بگو
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
+    setAlert((prev) => ({
+      ...prev,
+      active: true,
+      type: "success",
+      message: "Language is Changed Successfully !",
+    }));
   };
 
   const isRTL = ["ar", "fa", "he", "ku"].includes(language);
@@ -94,6 +100,14 @@ export default function LanguageProvider({ children }) {
         setAlert,
       }}
     >
+      {alert.active && !loading && (
+        <Alert
+          type={alert.type}
+          message={alert.message}
+          setAlert={setAlert}
+          alert={alert}
+        />
+      )}
       {children}
     </LanguageContext.Provider>
   );

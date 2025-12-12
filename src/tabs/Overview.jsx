@@ -7,7 +7,6 @@ import { useLanguage } from "../contexts/LanguageContext";
 import { useWeather } from "../contexts/WeatherContext";
 import CountUp from "../style_components/Countup";
 import Loader from "../style_components/Loader";
-import Alert from "../style_components/Alert";
 import { useTranslation } from "react-i18next";
 
 const WeatherDashboard = () => {
@@ -22,14 +21,11 @@ const WeatherDashboard = () => {
     useWeather();
   const [hourly, setHourly] = useState([]);
 
-  const [error, setError] = useState("");
-
   useEffect(() => {
-    if (!targetCity || !weather) return;
-
     setLoading(true);
 
     const fetchAdditionalData = async () => {
+      if (!weather) return;
       try {
         const [hourRes, airRes, forecastRes] = await Promise.all([
           axios.get(
@@ -54,7 +50,7 @@ const WeatherDashboard = () => {
     };
 
     fetchAdditionalData();
-  }, [targetCity, weather]);
+  }, [targetCity, weather, language]);
 
   // return a formatted city-local time string (safe when weather is null)
   const formatCityTime = (dt, timezone, locale = language, opts = {}) => {
@@ -101,8 +97,6 @@ const WeatherDashboard = () => {
 
   return (
     <section className="max-w-7xl mx-auto px-6 py-12">
-      {/* <Alert message={"Success, It's just a testing alert!"} /> */}
-
       {loading && <Loader />}
       {weather && airQuality && !loading && (
         <motion.div

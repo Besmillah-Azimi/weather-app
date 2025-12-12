@@ -3,21 +3,15 @@ import { motion } from "framer-motion";
 import axios from "axios";
 import { useLanguage } from "../contexts/LanguageContext";
 import { useWeather } from "../contexts/WeatherContext";
-import TypingText from "../style_components/TypingText";
 import CountUp from "../style_components/Countup";
 import Loader from "../style_components/Loader";
 import { useTranslation } from "react-i18next";
 
+import SplitText from "../components/SplitText";
+
 const Hourly = () => {
-  const {
-    WeatherFetch,
-    targetCity,
-    weatherIcons,
-    weather,
-    API_KEY,
-    loading,
-    setLoading,
-  } = useWeather();
+  const { WeatherFetch, weatherIcons, weather, API_KEY, loading, setLoading } =
+    useWeather();
 
   const { language, isRTL } = useLanguage();
 
@@ -29,7 +23,7 @@ const Hourly = () => {
   // Fetch hourly forecast
   useEffect(() => {
     setLoading(true);
-    if (!targetCity) return;
+    if (!weather) return;
 
     const fetchHourly = async () => {
       WeatherFetch()
@@ -57,7 +51,7 @@ const Hourly = () => {
         });
     };
     fetchHourly();
-  }, [targetCity]);
+  }, [weather.name, language]);
 
   // Format time
   const formatTime = (dt_txt) => {
@@ -90,18 +84,24 @@ const Hourly = () => {
 
   return (
     <section className="max-w-7xl mx-auto px-6 py-12 text-center">
-      <h2
-        className="text-2xl font-semibold mb-8 text-white drop-shadow"
-        dir={isRTL ? "rtl" : "ltr"}
-      >
-        {!loading && !error && <TypingText texts={[t("hourly.title")]} />}
-      </h2>
-
+      {!loading && !error && (
+        <SplitText
+          text={t("hourly.title")}
+          tag="h2"
+          className="text-2xl font-semibold mb-8 text-white drop-shadow header-RTL text-shadow-lg"
+          delay={100}
+          duration={0.6}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          textAlign="center"
+          isRTL={isRTL}
+        />
+      )}
       {/* Loading */}
       {loading && <Loader />}
-
       {!loading && error && <p className="text-center text-red-400">{error}</p>}
-
       {!loading && !error && hourly.length > 0 && (
         <motion.div
           variants={container}
@@ -120,7 +120,7 @@ const Hourly = () => {
               <motion.div
                 key={index}
                 variants={item}
-                className="duration-300 font-mono text-white shadow-md shadow-blue-700/30 hover:shadow-blue-500 group cursor-pointer relative overflow-hidden bg-[#DCDFE4]/10 backdrop-blur-xl w-35 h-50 scale-[1.1] dark:bg-[#22272B]/20 rounded-3xl p-4 hover:w-56 hover:bg-blue-200/20 hover:dark:bg-[#0C66E4]/20"
+                className="duration-300 font-mono text-white shadow-md shadow-blue-700/30 hover:shadow-blue-500 group cursor-pointer relative overflow-hidden bg-[#DCDFE4]/10 backdrop-blur-xl w-38 h-55 scale-[1.1] dark:bg-[#22272B]/20 rounded-3xl p-2 hover:w-56 hover:bg-blue-200/20 hover:dark:bg-[#0C66E4]/20"
               >
                 <h3 className="text-xl text-center">{time}</h3>
                 <div className="gap-4 relative">
@@ -133,16 +133,20 @@ const Hourly = () => {
                     <CountUp to={temp} toLocal />°
                   </h4>
                 </div>
-                <div className="absolute duration-300 -left-32 mt-2 group-hover:left-10">
+                <div
+                  dir={isRTL ? "rtl" : "ltr"}
+                  className="absolute duration-300 -left-52 mt-2 group-hover:left-10"
+                >
                   <p className="text-sm">{desc}</p>
-                  <p className="text-sm">{humidity}% humidity</p>
+                  <p className="text-sm">
+                    {humidity}% {t("overview.humidity")}
+                  </p>
                 </div>
               </motion.div>
             );
           })}
         </motion.div>
       )}
-
       {!loading && !error && hourly.length === 0 && (
         <p className="text-gray-400 text-center">No hourly data available.</p>
       )}

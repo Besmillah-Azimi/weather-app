@@ -5,25 +5,18 @@ import { easeOut, motion } from "framer-motion";
 
 import { useWeather } from "../contexts/WeatherContext";
 import CountUp from "../style_components/Countup";
-import TypingText from "../style_components/TypingText";
+import SplitText from "../components/SplitText";
 import Loader from "../style_components/Loader";
 import { useTranslation } from "react-i18next";
 
 const SevenDayWeather = () => {
-  const { language } = useLanguage();
+  const { language, isRTL } = useLanguage();
   const [daily, setDaily] = useState([]);
 
   const { t } = useTranslation();
 
-  const {
-    WeatherFetch,
-    targetCity,
-    loading,
-    setLoading,
-    weather,
-    weatherIcons,
-    API_KEY,
-  } = useWeather();
+  const { WeatherFetch, loading, setLoading, weather, weatherIcons, API_KEY } =
+    useWeather();
 
   useEffect(() => {
     setLoading(true);
@@ -68,7 +61,7 @@ const SevenDayWeather = () => {
     };
 
     cityRes();
-  }, [targetCity]);
+  }, [weather.name, language]);
 
   // Animation settings
   const container = {
@@ -92,103 +85,113 @@ const SevenDayWeather = () => {
 
   return (
     <section className="max-w-7xl mx-auto px-6 py-16 text-white">
-      <h2 className="text-4xl font-bold text-center mb-12 tracking-tight">
-        {!loading && (
-          <TypingText
-            texts={[t("daily.title")]}
-            className="text-3xl font-semibold text-center mb-10 bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent tracking-wide drop-shadow-sm"
-          />
-        )}
-      </h2>
-
       {/* Loading */}
       {loading && <Loader />}
+      {!loading && (
+        <>
+          <SplitText
+            text={t("daily.title")}
+            tag="h2"
+            className="text-2xl font-semibold mb-8 text-white drop-shadow header-RTL text-shadow-lg"
+            delay={100}
+            duration={0.6}
+            ease="power3.out"
+            splitType="chars"
+            from={{ opacity: 0, y: 40 }}
+            to={{ opacity: 1, y: 0 }}
+            textAlign="center"
+            isRTL={isRTL}
+          />
 
-      <motion.div
-        key={daily.length}
-        variants={container}
-        initial="hidden"
-        animate="visible"
-        className="flex flex-wrap gap-8 relative justify-center w-full"
-      >
-        {daily.map((day, index) => {
-          const dayDate = new Date(day.dt_txt);
+          <motion.div
+            key={daily.length}
+            variants={container}
+            initial="hidden"
+            animate="visible"
+            className="flex flex-wrap gap-8 relative justify-center w-full"
+          >
+            {daily.map((day, index) => {
+              const dayDate = new Date(day.dt_txt);
 
-          // Normalize both to midnight for accurate comparison (ignore hours/timezone)
-          const normalize = (date) =>
-            new Date(
-              date.getFullYear(),
-              date.getMonth(),
-              date.getDate()
-            ).getTime();
+              // Normalize both to midnight for accurate comparison (ignore hours/timezone)
+              const normalize = (date) =>
+                new Date(
+                  date.getFullYear(),
+                  date.getMonth(),
+                  date.getDate()
+                ).getTime();
 
-          const today = new Date();
-          const tomorrow = new Date();
-          tomorrow.setDate(today.getDate() + 1);
+              const today = new Date();
+              const tomorrow = new Date();
+              tomorrow.setDate(today.getDate() + 1);
 
-          const nDay = normalize(dayDate);
-          const nToday = normalize(today);
-          const nTomorrow = normalize(tomorrow);
+              const nDay = normalize(dayDate);
+              const nToday = normalize(today);
+              const nTomorrow = normalize(tomorrow);
 
-          const locale =
-            language && /^[a-z]{2}(-[A-Z]{2})?$/.test(language)
-              ? language
-              : "en-US"; // fallback if invalid
+              const locale =
+                language && /^[a-z]{2}(-[A-Z]{2})?$/.test(language)
+                  ? language
+                  : "en-US"; // fallback if invalid
 
-          let displayDay = dayDate.toLocaleDateString(locale, {
-            weekday: "long",
-          });
+              let displayDay = dayDate.toLocaleDateString(locale, {
+                weekday: "long",
+              });
 
-          if (nDay === nToday) {
-            displayDay = t("daily.today");
-          } else if (nDay === nTomorrow) {
-            displayDay = t("daily.tomorrow");
-          }
+              if (nDay === nToday) {
+                displayDay = t("daily.today");
+              } else if (nDay === nTomorrow) {
+                displayDay = t("daily.tomorrow");
+              }
 
-          return (
-            <motion.div
-              variants={itema}
-              key={index}
-              className="relative overflow-hidden min-w-60 rounded-3xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 shadow-xl hover:shadow-2xl hover:scale-[1.03] transition-all duration-500"
-            >
-              <div className="relative z-10 p-6 text-center flex flex-col items-center space-y-3">
-                <p className="text-sm text-gray-300">
-                  {new Date(day.dt_txt).toLocaleDateString(locale, {
-                    day: "numeric",
-                    month: "long",
-                  })}
-                </p>
+              return (
+                <motion.div
+                  variants={itema}
+                  key={index}
+                  className="relative overflow-hidden min-w-60 rounded-3xl bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 shadow-xl hover:shadow-2xl hover:scale-[1.03] transition-all duration-500"
+                >
+                  <div className="relative z-10 p-6 text-center flex flex-col items-center space-y-3">
+                    <p className="text-sm text-gray-300">
+                      {new Date(day.dt_txt).toLocaleDateString(locale, {
+                        day: "numeric",
+                        month: "long",
+                      })}
+                    </p>
 
-                {weatherIcons[day.weather[0].icon] && (
-                  <img
-                    src={`/icons/weather/${weatherIcons[day.weather[0].icon]}`}
-                    className="w-16 scale-[110%]"
-                    alt="weather icon"
-                  />
-                )}
+                    {weatherIcons[day.weather[0].icon] && (
+                      <img
+                        src={`/icons/weather/${
+                          weatherIcons[day.weather[0].icon]
+                        }`}
+                        className="w-16 scale-[110%]"
+                        alt="weather icon"
+                      />
+                    )}
 
-                <p className="text-lg font-semibold text-white tracking-wide">
-                  {displayDay}
-                </p>
+                    <p className="text-lg font-semibold text-white tracking-wide">
+                      {displayDay}
+                    </p>
 
-                <p className="text-sm text-gray-400 capitalize">
-                  {day.weather[0].description}
-                </p>
+                    <p className="text-sm text-gray-400 capitalize">
+                      {day.weather[0].description}
+                    </p>
 
-                <div className="mt-4 flex justify-center items-center gap-3">
-                  <span className="text-3xl font-bold text-white">
-                    <CountUp to={Math.round(day.main.temp_max)} />°
-                  </span>
-                  <span className="text-gray-300">/</span>
-                  <span className="text-xl text-gray-400">
-                    <CountUp to={Math.round(day.main.temp_min)} />°
-                  </span>
-                </div>
-              </div>
-            </motion.div>
-          );
-        })}
-      </motion.div>
+                    <div className="mt-4 flex justify-center items-center gap-3">
+                      <span className="text-3xl font-bold text-white">
+                        <CountUp to={Math.round(day.main.temp_max)} />°
+                      </span>
+                      <span className="text-gray-300">/</span>
+                      <span className="text-xl text-gray-400">
+                        <CountUp to={Math.round(day.main.temp_min)} />°
+                      </span>
+                    </div>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </motion.div>
+        </>
+      )}
     </section>
   );
 };

@@ -1,11 +1,11 @@
-import { useContext } from "react";
 import Sidebar from "./Sidebar";
 import WeatherDashboard from "./tabs/Overview";
-import { TabContext } from "./contexts/TabContext";
+import { useTab } from "./contexts/TabContext";
 import GlassSearch from "./Search";
 import Hourly from "./tabs/Hourly";
 import SevenDayWeather from "./tabs/7days";
 import Dock from "./style_components/Taskbar";
+import LocationBadge from "./style_components/LocationBadge";
 
 import LanguageModal from "./style_components/LanguageModal";
 
@@ -13,6 +13,7 @@ import "./App.css";
 
 import { useLanguage } from "./contexts/LanguageContext";
 import { useTranslation } from "react-i18next";
+import { useWeather } from "./contexts/WeatherContext";
 
 const icons = {
   menu: (
@@ -97,10 +98,10 @@ const icons = {
   ),
 };
 
-export default function () {
-  const { activeTab } = useContext(TabContext);
+export default function App() {
+  const { activeTab, setActiveTab } = useTab();
 
-  const { setActiveTab } = useContext(TabContext);
+  const { weather, fullCountry } = useWeather();
 
   const { language, setLanguage, langs, langModal, setLangModal } =
     useLanguage();
@@ -132,6 +133,12 @@ export default function () {
 
   return (
     <div className="md:flex w-screen h-screen overflow-auto">
+      {/* Location Badge — overlaps 20% on the search input */}
+      {weather && (
+        <div className="absolute left-0 scale-[0.75] z-40">
+          <LocationBadge content={`${fullCountry}, ${weather.name}`} />
+        </div>
+      )}
       <LanguageModal
         isOpen={langModal}
         onClose={() => setLangModal(false)}

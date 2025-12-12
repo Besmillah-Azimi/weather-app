@@ -18,7 +18,7 @@ import {
 
 function DockItem({
   children,
-  className = "",
+  className = "glass",
   onClick,
   mouseX,
   spring,
@@ -138,11 +138,15 @@ export default function Dock({
           isHovered.set(0);
           mouseX.set(Infinity);
         }}
-        className={`${className} absolute backdrop-blur-1xl bg-white/10 bottom-2 left-1/2 transform -translate-x-1/2 flex items-end w-fit gap-4 rounded-2xl border-neutral-700 border-2 pb-2 px-4`}
+        // className={`${className} absolute glass bottom-2 left-1/2 transform -translate-x-1/2 flex items-end w-fit gap-4 rounded-2xl border-neutral-700 border-2 pb-2 px-4`}
+        className={`${className} glass-container glass-container--small absolute bottom-2 left-1/2 transform -translate-x-1/2 flex items-end w-fit gap-4 rounded-2xl  pb-2 px-4`}
         style={{ height: panelHeight }}
         role="toolbar"
         aria-label="Application dock"
       >
+        <div className="glass-filter rounded-2xl"></div>
+        <div className="glass-overlay rounded-2xl"></div>
+        <div className="glass-specular rounded-2xl"></div>
         {items.map((item, index) => (
           <DockItem
             key={index}
@@ -159,6 +163,25 @@ export default function Dock({
           </DockItem>
         ))}
       </motion.div>
+      <svg style={{ display: "none" }}>
+        <filter id="lg-dist" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.009 0.009"
+            numOctaves="1"
+            seed="1500"
+            result="noise"
+          />
+          <feGaussianBlur in="noise" stdDeviation="2" result="blurred" />
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="blurred"
+            scale="120"
+            xChannelSelector="R"
+            yChannelSelector="G"
+          />
+        </filter>
+      </svg>
     </motion.div>
   );
 }

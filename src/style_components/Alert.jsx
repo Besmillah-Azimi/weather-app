@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-const Alert = ({ type = "success", message, onClose }) => {
+const Alert = ({ type = "success", message, onClose, setAlert, alert }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
       setTimeout(() => {
+        setAlert({ ...alert, active: false });
+
         if (onClose) onClose();
       }, 400);
     }, 4200);
@@ -85,87 +88,88 @@ const Alert = ({ type = "success", message, onClose }) => {
 
   return (
     <div className="fixed inset-x-0 top-4 z-50 flex justify-center pointer-events-none">
-      <div
-        role="alert"
-        className={`
+      <AnimatePresence>
+        {isVisible ? (
+          <motion.div
+            initial={{ opacity: 0, scale: 0, top: -100 }}
+            animate={{ opacity: 1, scale: 1, top: 0 }}
+            exit={{ opacity: 0, scale: 0, top: -100 }}
+            role="alert"
+            className={`
           relative overflow-hidden max-w-sm w-full mx-4
           border-l-4 ${config.border}
           rounded-2xl
-          backdrop-blur-3xl
-          bg-white/45 dark:bg-black/35
+          glass-alert
           ${config.from} ${config.to}
           shadow-2xl ${config.glow}
           ring-1 ring-white/30 dark:ring-white/10
           p-4 flex items-center gap-3
           transition-all duration-400 ease-out
-          ${
-            isVisible
-              ? "translate-y-0 opacity-100 scale-100"
-              : "-translate-y-20 opacity-0 scale-90"
-          }
           pointer-events-auto
         `}
-        style={{
-          fontFamily:
-            "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif",
-          fontWeight: "500",
-          backgroundImage: `
+            style={{
+              fontFamily:
+                "-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif",
+              fontWeight: "500",
+              backgroundImage: `
             linear-gradient(to bottom, rgba(255,255,255,0.3), rgba(255,255,255,0.05)),
             linear-gradient(135deg, ${config.from.replace(
               /\/\d+/g,
               "/50"
             )} 0%, ${config.to.replace(/\/\d+/g, "/30")} 100%)
           `,
-          boxShadow: `
+              boxShadow: `
             0 10px 30px rgba(0,0,0,0.15),
             0 0 30px ${config.glow
               .replace("shadow-", "")
               .replace("/40", "/30")},
             inset 0 1px 0 rgba(255,255,255,0.5)
           `,
-        }}
-      >
-        {/* Liquid shine highlight */}
-        <div
-          className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent"
-          style={{ filter: "blur(1px)" }}
-        />
-
-        {/* Icon */}
-        <div className={`${config.iconColor} flex-shrink-0 drop-shadow-md`}>
-          {config.icon}
-        </div>
-
-        {/* Message */}
-        <p className="flex-1 text-sm font-medium text-black dark:text-white drop-shadow-sm">
-          {message}
-        </p>
-
-        {/* Close button */}
-        <button
-          onClick={() => {
-            setIsVisible(false);
-            setTimeout(() => {
-              if (onClose) onClose();
-            }, 400);
-          }}
-          className="text-black/60 dark:text-white/60 hover:text-black/90 dark:hover:text-white/90 transition"
-        >
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+            }}
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2.5}
-              d="M6 18L18 6M6 6l12 12"
+            {/* Liquid shine highlight */}
+            <div
+              className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent"
+              style={{ filter: "blur(1px)" }}
             />
-          </svg>
-        </button>
-      </div>
+
+            {/* Icon */}
+            <div className={`${config.iconColor} flex-shrink-0 drop-shadow-md`}>
+              {config.icon}
+            </div>
+
+            {/* Message */}
+            <p className="flex-1 text-sm font-medium text-black dark:text-white drop-shadow-sm">
+              {message}
+            </p>
+
+            {/* Close button */}
+            <button
+              onClick={() => {
+                setIsVisible(false);
+                setTimeout(() => {
+                  if (onClose) onClose();
+                }, 400);
+              }}
+              className="text-black/60 dark:text-white/60 hover:text-black/90 dark:hover:text-white/90 transition"
+            >
+              <svg
+                className="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2.5}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              </svg>
+            </button>
+          </motion.div>
+        ) : null}
+      </AnimatePresence>
     </div>
   );
 };
