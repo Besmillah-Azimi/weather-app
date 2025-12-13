@@ -40,7 +40,7 @@
 ## تصویر صفحه
 
 <p align="center">
-   <img src="docs/screenshot.svg" alt="نمای کلی اپ هوا" width="720">
+   <img src="docs/fa-screenshot-overview.PNG" alt="نمای کلی اپ هوا" width="720">
 </p>
 
 ## تکنولوژی‌ها
