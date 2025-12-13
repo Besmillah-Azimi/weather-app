@@ -1,14 +1,16 @@
 # Weather — Modern Multi-language Weather Dashboard
 
-A beautiful, responsive, and fully localized weather dashboard built with React and Vite. It shows current conditions, hourly and daily forecasts with elegant visuals and animations.
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=flat&logo=netlify)](https://chimerical-marshmallow-6f8276.netlify.app/) [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=flat&logo=github)](https://github.com/Besmillah-Azimi/weather-app) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+A beautiful, responsive, and fully localized weather dashboard built with React and Vite. It shows current conditions, hourly and daily forecasts with elegant visuals and animations. Clean UI, fast performance, and a focus on accessibility.
 
 **Highlights:**
 
-- Lightweight and fast with Vite.
-- Multi-language support (i18n) — many locales preloaded.
-- Tailwind CSS + animations (GSAP, Framer Motion).
-- Responsive UI with immersive visuals and icons.
-- Simple, modular component structure for easy customization.
+- ⚡ Lightweight and fast with Vite.
+- 🌍 Multi-language support (i18n) — many locales preloaded.
+- ✨ Tailwind CSS + animations (GSAP, Framer Motion).
+- 📱 Responsive UI with immersive visuals and icons.
+- 🧩 Simple, modular component structure for easy customization.
 
 ---
 
@@ -23,6 +25,28 @@ A beautiful, responsive, and fully localized weather dashboard built with React 
 - Country names displayed in the selected language.
 - Light/dark visuals adjusted for time-of-day and weather.
 - Easy language switching via UI.
+
+## Contact
+
+- Open an issue at the project's GitHub repo: https://github.com/Besmillah-Azimi/weather-app/issues
+
+## Table of Contents
+
+- [Demo](#demo)
+- [Features](#features)
+- [Built With](#built-with)
+- [Quick Start](#quick-start)
+- [Environment Variables](#environment-variables)
+- [Localization](#localization)
+- [Tips & Customization](#tips--customization)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Screenshot
+
+<p align="center">
+   <img src="docs/screenshot.svg" alt="Weather dashboard screenshot" width="720">
+</p>
 
 ## Built With
 
@@ -47,13 +71,19 @@ A beautiful, responsive, and fully localized weather dashboard built with React 
 
 3. Configure your OpenWeatherMap API key
 
-This project ships with a demo key in the code for convenience. For production or privacy, set your own key.
+This project ships with a demo key in the code for convenience. For production or privacy, set your own key using an environment variable.
 
-- Create a `.env` file at the project root and add:
+Create a `.env` file at the project root and add:
 
-  VITE_OPENWEATHER_API_KEY=your_openweather_api_key
+```sh
+VITE_OPENWEATHER_API_KEY=your_openweather_api_key
+```
 
-- To use this key safely in the app, replace the hard-coded `API_KEY` value in `src/hooks/UseWeather.jsx` with `import.meta.env.VITE_OPENWEATHER_API_KEY`.
+To read the key from the environment, update `src/hooks/UseWeather.jsx` to use:
+
+```js
+const API_KEY = import.meta.env.VITE_OPENWEATHER_API_KEY;
+```
 
 4. Run the dev server
 
@@ -85,6 +115,10 @@ This project ships with a demo key in the code for convenience. For production o
 - Replace `API_KEY` with a secure env variable and avoid committing keys.
 - Swap or add icons located in `/public/icons/weather`.
 - Extend the `WeatherReducer` to support additional weather animations or logic.
+
+## Support
+
+- Having trouble? Open an issue on GitHub or reach the owner via the repository contact details.
 
 ## Contributing
 
