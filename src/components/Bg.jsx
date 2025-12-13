@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { useWeather } from "../contexts/WeatherContext";
+import { useWeather } from "../hooks/UseWeather";
 
 export default function WeatherBackground() {
   const { state } = useWeather();

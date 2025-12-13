@@ -1,4 +1,4 @@
-import Alert from "../style_components/Alert";
+import Alert from "../components/Alert";
 import { createContext, useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 

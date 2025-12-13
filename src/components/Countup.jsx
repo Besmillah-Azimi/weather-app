@@ -1,4 +1,4 @@
-import { useLanguage } from "../contexts/LanguageContext";
+import { useLanguage } from "../hooks/UseLanguage";
 import React, { useEffect, useState } from "react";
 
 export default function CountUp({

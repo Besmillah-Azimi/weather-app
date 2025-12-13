@@ -1,19 +1,18 @@
-import Sidebar from "./Sidebar";
-import WeatherDashboard from "./tabs/Overview";
-import { useTab } from "./contexts/TabContext";
-import GlassSearch from "./Search";
-import Hourly from "./tabs/Hourly";
-import SevenDayWeather from "./tabs/7days";
-import Dock from "./style_components/Taskbar";
-import LocationBadge from "./style_components/LocationBadge";
+import WeatherDashboard from "./components/tabs/Overview";
+import { useTab } from "./hooks/UseTab";
+import GlassSearch from "./components/Search";
+import Hourly from "./components/tabs/Hourly";
+import SevenDayWeather from "./components/tabs/7days";
+import Dock from "./components/Taskbar";
+import LocationBadge from "./components/LocationBadge";
 
-import LanguageModal from "./style_components/LanguageModal";
+import LanguageModal from "./components/LanguageModal";
 
-import "./App.css";
+import "./css/App.css";
 
-import { useLanguage } from "./contexts/LanguageContext";
+import { useLanguage } from "./hooks/UseLanguage";
 import { useTranslation } from "react-i18next";
-import { useWeather } from "./contexts/WeatherContext";
+import { useWeather } from "./hooks/UseWeather";
 
 const icons = {
   menu: (

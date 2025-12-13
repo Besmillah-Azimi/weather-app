@@ -1,12 +1,12 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import { useLanguage } from "../contexts/LanguageContext";
+import { useLanguage } from "../../hooks/UseLanguage";
 import { easeOut, motion } from "framer-motion";
 
-import { useWeather } from "../contexts/WeatherContext";
-import CountUp from "../style_components/Countup";
-import SplitText from "../components/SplitText";
-import Loader from "../style_components/Loader";
+import { useWeather } from "../../hooks/UseWeather";
+import CountUp from "../Countup";
+import SplitText from "../SplitText";
+import Loader from "../Loader";
 import { useTranslation } from "react-i18next";
 
 const SevenDayWeather = () => {

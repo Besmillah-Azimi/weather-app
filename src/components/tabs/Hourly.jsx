@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
-import { useLanguage } from "../contexts/LanguageContext";
-import { useWeather } from "../contexts/WeatherContext";
-import CountUp from "../style_components/Countup";
-import Loader from "../style_components/Loader";
+import { useLanguage } from "../../hooks/UseLanguage";
+import { useWeather } from "../../hooks/UseWeather";
+import CountUp from "../Countup";
+import Loader from "../Loader";
 import { useTranslation } from "react-i18next";
 
-import SplitText from "../components/SplitText";
+import SplitText from "../SplitText";
 
 const Hourly = () => {
   const { WeatherFetch, weatherIcons, weather, API_KEY, loading, setLoading } =

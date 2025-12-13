@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from "react";
 import axios from "axios";
-import { useWeather } from "./contexts/WeatherContext";
+import { useWeather } from "../hooks/UseWeather";
 import { useTranslation } from "react-i18next";
-import { useLanguage } from "./contexts/LanguageContext";
-import { useLocation } from "./contexts/LocationContext";
+import { useLanguage } from "../hooks/UseLanguage";
+import { useLocation } from "../hooks/UseLocation";
 
-import LocationBadge from "./style_components/LocationBadge";
+import LocationBadge from "./LocationBadge";
 
 export default function GlassSearch() {
   const [query, setQuery] = useState("");

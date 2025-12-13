@@ -5,8 +5,8 @@ import {
   useEffect,
   useReducer,
 } from "react";
-import { useLocation } from "./LocationContext";
-import { useLanguage } from "./LanguageContext";
+import { useLocation } from "./UseLocation";
+import { useLanguage } from "./UseLanguage";
 import axios from "axios";
 
 import {

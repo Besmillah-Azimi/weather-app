@@ -1,7 +1,7 @@
-import LanguageProvider from "./contexts/LanguageContext";
-import LocationProvider from "./contexts/LocationContext";
-import TabProvider from "./contexts/TabContext";
-import WeatherProvider from "./contexts/WeatherContext";
+import LanguageProvider from "./UseLanguage";
+import LocationProvider from "./UseLocation";
+import TabProvider from "./UseTab";
+import WeatherProvider from "./UseWeather";
 
 // fix browser Geolocation Tomorrow.
 
