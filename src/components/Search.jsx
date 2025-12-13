@@ -5,15 +5,13 @@ import { useTranslation } from "react-i18next";
 import { useLanguage } from "../hooks/UseLanguage";
 import { useLocation } from "../hooks/UseLocation";
 
-import LocationBadge from "./LocationBadge";
-
 export default function GlassSearch() {
   const [query, setQuery] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const containerRef = useRef();
 
-  const { API_KEY, weather, fullCountry } = useWeather();
+  const { API_KEY } = useWeather();
   const { setCity } = useLocation();
 
   // ⏳ Debounce timer
