@@ -12,7 +12,7 @@ A beautiful, responsive, and fully localized weather dashboard built with React 
 
 ---
 
-**Demo:** Run locally (below) and open http://localhost:5173/ in your browser.
+**Demo:** Live demo: https://chimerical-marshmallow-6f8276.netlify.app/ — Run locally (below) and open http://localhost:5173/ in your browser.
 
 ---
 
@@ -38,7 +38,7 @@ A beautiful, responsive, and fully localized weather dashboard built with React 
 
 1. Clone the repo
 
-   git clone https://github.com/your_user/weather.git
+   git clone https://github.com/Besmillah-Azimi/weather-app.git
    cd weather
 
 2. Install dependencies

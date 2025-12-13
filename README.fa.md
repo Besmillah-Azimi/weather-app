@@ -11,7 +11,7 @@
 
 ---
 
-**نمایش محلی:** برای مشاهده اپ به صورت محلی طبق دستورالعمل زیر عمل کنید.
+**نمایش محلی:** پیش‌نمایش آنلاین: https://chimerical-marshmallow-6f8276.netlify.app/ — برای مشاهده اپ به صورت محلی طبق دستورالعمل زیر عمل کنید.
 
 ---
 
@@ -37,7 +37,7 @@
 
 1. کلون کنید:
 
-   git clone https://github.com/your_user/weather.git
+   git clone https://github.com/Besmillah-Azimi/weather-app.git
    cd weather
 
 2. نصب وابستگی‌ها:
