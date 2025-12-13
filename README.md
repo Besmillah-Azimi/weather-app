@@ -1,11 +1,16 @@
 <p align="center">
-  <strong>English (left) &middot; فارسی / Persian (right)</strong>
+  <strong>English / فارسی (Persian)</strong>
+</p>
+
+<p align="center">
+  <a href="#en">English</a> · <a href="#fa">فارسی</a>
 </p>
 
 <table>
   <tr>
     <td valign="top" width="50%">
-      <div markdown="1">
+      <a id="en"></a>
+      <div markdown="1" dir="ltr">
         # Weather App
 
         A small, fast, multilingual weather web app built with React and Vite. The app shows current weather, hourly forecasts, a 7-day outlook, and localized UI text with many pre-provided language files.
@@ -169,6 +174,7 @@
       </div>
     </td>
     <td valign="top" width="50%">
+      <a id="fa"></a>
       <div markdown="1" dir="rtl" style="text-align: right;">
         # اپلیکیشن آب‌وهوا
 
