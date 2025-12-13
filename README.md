@@ -45,7 +45,7 @@ A beautiful, responsive, and fully localized weather dashboard built with React 
 ## Screenshot
 
 <p align="center">
-   <img src="docs/en-screenshot.PNG" alt="Weather dashboard screenshot" width="720">
+   <img src="docs/en-screenshot-overview.PNG" alt="Weather dashboard screenshot" width="720">
 </p>
 
 ## Built With
