@@ -1,3 +1,6 @@
+[![English](https://img.shields.io/badge/README-English-blue)](README.md)
+[![فارسی](https://img.shields.io/badge/README-فارسی-green)](README.fa.md)
+
 # Weather — Modern Multi-language Weather Dashboard
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=flat&logo=netlify)](https://chimerical-marshmallow-6f8276.netlify.app/) [![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717?style=flat&logo=github)](https://github.com/Besmillah-Azimi/weather-app) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
