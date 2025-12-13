@@ -129,14 +129,6 @@ Contributions are welcome. To contribute:
 3. Make your changes
 4. Submit a pull request with a clear summary and screenshots (if applicable)
 
-## License
-
-This project is MIT-licensed. Replace this with your preferred license.
-
 ## Credits
 
 - Designed and implemented with a modern React toolchain and open-source libraries. Thank you to the maintainers of the libraries used here.
-
----
-
-If you'd like, I can also update the code to use `VITE_OPENWEATHER_API_KEY` instead of the hard-coded key. Would you like me to do that now?
